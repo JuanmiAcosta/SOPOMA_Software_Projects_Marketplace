@@ -21,6 +21,10 @@ body>main {
   background-color: #374956;
 }
 
+#btn-2-mobile {
+  background-color: #374956;
+}
+
 article {
   padding: 0;
   overflow: hidden;
@@ -87,6 +91,11 @@ article div:nth-of-type(2) {
 
 #btn-1:hover {
   background-color: #374956;
+  color: var(--secondary-hover);
+}
+
+ #btn-2-mobile:hover {
+  background-color: white;
   color: var(--secondary-hover);
 }
 

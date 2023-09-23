@@ -1,6 +1,7 @@
 let user_mode = 0 // 0 -> sign up 1 -> sign in
 const btn1 = document.getElementById('btn-1');
 const btn2 = document.getElementById('btn-2');
+const btn2mobile = document.getElementById('btn-2-mobile');
 const title = document.getElementById('title-form');
 const subtitle = document.getElementById('subtitle-form');
 const nameuser = document.getElementById('name');
@@ -20,6 +21,7 @@ function pasoMode1(){
     phone.style.display = 'block';
     email.style.display = 'block';
     password2.style.display = 'block';
+    console.log('pasoMode1');
 }
 
 function pasoMode0(){
@@ -33,6 +35,7 @@ function pasoMode0(){
     phone.style.display = 'none';
     email.style.display = 'none';
     password2.style.display = 'none';
+    
 }
 
 //En el modo 0 el boton sign up es el 1 y el sign in el 2
@@ -43,6 +46,17 @@ btn2.onclick = () => {
         pasoMode0();
     }
 }
+
+btn2mobile.onclick = () => {
+    if (user_mode == 0) {
+        pasoMode1();
+    }else if (user_mode == 1) {
+        pasoMode0();
+    }
+}
+
+
+
 
 
 
