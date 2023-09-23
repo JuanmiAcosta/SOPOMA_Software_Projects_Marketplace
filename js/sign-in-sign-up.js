@@ -17,8 +17,8 @@ const inputFields = [nameuser, surname, phone, email, password2];
 function pasoMode1() {
     user_mode = 1;
     btn1.innerHTML = 'Sign in';
-    btn2.innerHTML = 'Sign up';
-    btn2mobile.innerHTML = 'Sign up';
+    btn2.innerHTML = 'Are you already an user ? 🐧';
+    btn2mobile.innerHTML = 'Are you already an user ? 🐧';
     title.innerHTML = 'Sign in';
     subtitle.innerHTML = '🐣 Register for a OSM experience 🐣';
 
@@ -40,8 +40,8 @@ function pasoMode1() {
 function pasoMode0() {
     user_mode = 0;
     btn1.innerHTML = 'Sign up';
-    btn2.innerHTML = 'Sign in';
-    btn2mobile.innerHTML = 'Sign in';
+    btn2.innerHTML = 'Are you a new user? 🐣';
+    btn2mobile.innerHTML = 'Are you a new user? 🐣';
     title.innerHTML = 'Sign up';
     subtitle.innerHTML = '🐧 Welcome back to the system 🐧';
 
@@ -60,6 +60,9 @@ function pasoMode0() {
 }
 
 //En el modo 0 el boton sign up es el 1 y el sign in el 2
+
+//CAMBIO DE MODO
+
 btn2.onclick = () => {
     if (user_mode == 0) {
         pasoMode1();
@@ -75,6 +78,8 @@ btn2mobile.onclick = () => {
         pasoMode0();
     }
 }
+
+// SIGN IN / SIGN UP
 
 
 

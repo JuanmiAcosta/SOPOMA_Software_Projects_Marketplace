@@ -115,11 +115,11 @@
             />
             
             <button id="btn-1" type="submit" class="contrast" onclick="event.preventDefault()">Sign up</button>
-            <button class="btn2-mobile" id="btn-2-mobile" type="submit" class="contrast" onclick="event.preventDefault()">Sign in</button>
+            <button class="btn2-mobile" id="btn-2-mobile" type="submit" class="contrast" onclick="event.preventDefault()">Are you a new user? 🐣</button>
           </form>
         </div>
-        <div>
-          <button id="btn-2" type="submit" class="contrast" onclick="event.preventDefault()">Sign in</button>
+        <div id="foto">
+          <button id="btn-2" type="submit" class="contrast" onclick="event.preventDefault()">Are you a new user? 🐣</button>
         </div>
       </article>
     </main>
