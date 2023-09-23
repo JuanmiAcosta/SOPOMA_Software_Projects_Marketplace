@@ -46,7 +46,7 @@
             <h1 id="title-form">Sign up</h1>
             <h2 id="subtitle-form">🐧 Welcome back to the system 🐧</h2>
           </hgroup>
-          <form>
+          <form action="php/register_be.php" method="POST" onsubmit="return validarFormulario()">
             <input
               style="display:none;"
               id="name"
@@ -80,7 +80,7 @@
             <input
               style="display:none;"
               id="phone"
-              type="number"
+              type="text"
               name="phone"
               placeholder="Phone number ..."
               aria-label="Phone number"
@@ -89,7 +89,7 @@
             />
             <input
               type="text"
-              name="login"
+              name="user"
               placeholder="User ..."
               aria-label="Login"
               autocomplete="nickname"
@@ -97,6 +97,7 @@
             />
             <input
               type="password"
+              id="password"
               name="password"
               placeholder="Password ..."
               aria-label="Password"
@@ -114,7 +115,7 @@
               required
             />
             
-            <button id="btn-1" type="submit" class="contrast" onclick="event.preventDefault()">Sign up</button>
+            <button id="btn-1" type="submit" class="contrast" >Sign up</button>
             <button class="btn2-mobile" id="btn-2-mobile" type="submit" class="contrast" onclick="event.preventDefault()">Are you a new user? 🐣</button>
           </form>
         </div>

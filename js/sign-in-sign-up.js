@@ -14,6 +14,20 @@ const surname = document.getElementById('surname');
 // Assuming you have an array of your input fields in order
 const inputFields = [nameuser, surname, phone, email, password2];
 
+function validarFormulario() {
+    var contrasena = document.getElementById("password").value;
+    var confirmarContrasena = document.getElementById("2password").value;
+
+    if (contrasena !== confirmarContrasena) {
+        alert("Las contraseñas no coinciden.");
+        console.log("Las contraseñas no coinciden.");
+        return false; // Evita que el formulario se envíe
+    }
+
+    // Si las contraseñas coinciden, el formulario se enviará
+    return true;
+}
+
 function pasoMode1() {
     user_mode = 1;
     btn1.innerHTML = 'Sign in';
