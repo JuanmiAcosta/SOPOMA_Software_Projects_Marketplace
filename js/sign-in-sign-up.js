@@ -14,19 +14,20 @@ const surname = document.getElementById('surname');
 // Assuming you have an array of your input fields in order
 const inputFields = [nameuser, surname, phone, email, password2];
 
-function pasoMode1(){
+function pasoMode1() {
     user_mode = 1;
     btn1.innerHTML = 'Sign in';
     btn2.innerHTML = 'Sign up';
+    btn2mobile.innerHTML = 'Sign up';
     title.innerHTML = 'Sign in';
     subtitle.innerHTML = '🐣 Register for a OSM experience 🐣';
 
     for (const field of inputFields) {
         if (field.style.display !== 'none') {
-          field.focus();
-          break;
+            field.focus();
+            break;
         }
-      }
+    }
 
     nameuser.style.display = 'block';
     surname.style.display = 'block';
@@ -36,17 +37,18 @@ function pasoMode1(){
     console.log('pasoMode1');
 }
 
-function pasoMode0(){
+function pasoMode0() {
     user_mode = 0;
     btn1.innerHTML = 'Sign up';
     btn2.innerHTML = 'Sign in';
+    btn2mobile.innerHTML = 'Sign in';
     title.innerHTML = 'Sign up';
     subtitle.innerHTML = '🐧 Welcome back to the system 🐧';
 
     for (const field of inputFields) {
         field.style.display = 'none';
         field.removeAttribute('required');
-      }
+    }
 
     nameuser.style.display = 'none';
     surname.style.display = 'none';
@@ -54,14 +56,14 @@ function pasoMode0(){
     email.style.display = 'none';
     password2.style.display = 'none';
     console.log('pasoMode0');
-    
+
 }
 
 //En el modo 0 el boton sign up es el 1 y el sign in el 2
-btn2.onclick = () => { 
+btn2.onclick = () => {
     if (user_mode == 0) {
         pasoMode1();
-    }else if (user_mode == 1) {
+    } else if (user_mode == 1) {
         pasoMode0();
     }
 }
@@ -69,7 +71,7 @@ btn2.onclick = () => {
 btn2mobile.onclick = () => {
     if (user_mode == 0) {
         pasoMode1();
-    }else if (user_mode == 1) {
+    } else if (user_mode == 1) {
         pasoMode0();
     }
 }
