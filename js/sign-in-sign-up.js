@@ -1,4 +1,5 @@
 let user_mode = 0 // 0 -> sign up 1 -> sign in
+
 const btn1 = document.getElementById('btn-1');
 const btn2 = document.getElementById('btn-2');
 const btn2mobile = document.getElementById('btn-2-mobile');
@@ -10,12 +11,23 @@ const password2 = document.getElementById('2password');
 const phone = document.getElementById('phone');
 const surname = document.getElementById('surname');
 
+// Assuming you have an array of your input fields in order
+const inputFields = [nameuser, surname, phone, email, password2];
+
 function pasoMode1(){
     user_mode = 1;
     btn1.innerHTML = 'Sign in';
     btn2.innerHTML = 'Sign up';
     title.innerHTML = 'Sign in';
     subtitle.innerHTML = '🐣 Register for a OSM experience 🐣';
+
+    for (const field of inputFields) {
+        if (field.style.display !== 'none') {
+          field.focus();
+          break;
+        }
+      }
+
     nameuser.style.display = 'block';
     surname.style.display = 'block';
     phone.style.display = 'block';
@@ -30,11 +42,18 @@ function pasoMode0(){
     btn2.innerHTML = 'Sign in';
     title.innerHTML = 'Sign up';
     subtitle.innerHTML = '🐧 Welcome back to the system 🐧';
+
+    for (const field of inputFields) {
+        field.style.display = 'none';
+        field.removeAttribute('required');
+      }
+
     nameuser.style.display = 'none';
     surname.style.display = 'none';
     phone.style.display = 'none';
     email.style.display = 'none';
     password2.style.display = 'none';
+    console.log('pasoMode0');
     
 }
 
