@@ -78,7 +78,7 @@ body>main {
     background-size: cover;
   }
 
-  #sign_in:hover{
+  button:hover{
     background-color: #374956;
     color: var(--secondary-hover);
   }

@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Sign in OSM</title>
+    <title>Sign in / Sign up - OSM</title>
     <meta name="description" content="A minimalist sign in page. Built with Pico CSS." />
     <link rel="shortcut icon" href="https://picocss.com/favicon.ico" />
     <link rel="canonical" href="https://picocss.com/examples/sign-in/" />
@@ -43,14 +43,54 @@
       <article class="grid">
         <div>
           <hgroup>
-            <h1>Sign in</h1>
-            <h2>Register for a OS colaboration experience</h2>
+            <h1 id="title-form">Sign up</h1>
+            <h2 id="subtitle-form">Welcome back to the system 🐧</h2>
           </hgroup>
           <form>
             <input
+              style="display:none;"
+              id="name"
+              type="text"
+              name="name"
+              placeholder="Name ..."
+              aria-label="Name"
+              autocomplete="name"
+              required
+            />
+            <input
+              style="display:none;"
+              id="surname"
+              type="text"
+              name="surname"
+              placeholder="Surname ..."
+              aria-label="Surname"
+              autocomplete="surname"
+              required
+            />
+            <input
+              style="display:none;"
+              id="email"
+              type="text"
+              name="email"
+              placeholder="Email ..."
+              aria-label="Email"
+              autocomplete="email"
+              required
+            />
+            <input
+              style="display:none;"
+              id="phone"
+              type="number"
+              name="phone"
+              placeholder="Phone number ..."
+              aria-label="Phone number"
+              autocomplete="tel"
+              required
+            />
+            <input
               type="text"
               name="login"
-              placeholder="Login"
+              placeholder="User ..."
               aria-label="Login"
               autocomplete="nickname"
               required
@@ -58,21 +98,28 @@
             <input
               type="password"
               name="password"
-              placeholder="Password"
+              placeholder="Password ..."
               aria-label="Password"
               autocomplete="current-password"
               required
             />
-            <fieldset>
-              <label for="remember">
-                <input type="checkbox" role="switch" id="remember" name="remember" />
-                Remember me
-              </label>
-            </fieldset>
-            <button id="sign_in" type="submit" class="contrast" onclick="event.preventDefault()">Sign in</button>
+            <input
+              style="display:none;"
+              id="2password"
+              type="password"
+              name="password"
+              placeholder="Password again ..."
+              aria-label="Password"
+              autocomplete="current-password"
+              required
+            />
+            
+            <button id="btn-1" type="submit" class="contrast" onclick="event.preventDefault()">Sign up</button>
           </form>
         </div>
-        <div></div>
+        <div>
+          <button id="btn-2" type="submit" class="contrast" onclick="event.preventDefault()">Sign in</button>
+        </div>
       </article>
     </main>
     <!-- ./ Main -->
@@ -85,6 +132,8 @@
     <!-- ./ Footer -->
 
     <!-- Minimal theme switcher -->
+    <script src="js/sign-in-sign-up.js"></script>
     <script src="js/minimal-theme-switcher.js"></script>
+    
   </body>
 </html>
