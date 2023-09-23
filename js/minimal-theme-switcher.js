@@ -89,6 +89,12 @@ const themeSwitcher = {
     // Apply scheme
     applyScheme() {
         document.querySelector("html").setAttribute(this.rootAttribute, this.scheme);
+        //Change the border color of the logo to black when its light mode
+        if (this._scheme == "dark") {
+            document.getElementById("logo").style.borderColor = "white";
+        } else {
+            document.getElementById("logo").style.borderColor = "black";
+        }
     },
 
     // Store scheme to local storage

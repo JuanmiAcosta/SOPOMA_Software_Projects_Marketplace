@@ -7,6 +7,10 @@ body>main {
   padding: 1rem 0;
 }
 
+#logo{
+  border : 3px solid white;
+}
+
 #primer_a {
   display: flex;
   /* Usar flexbox para la disposición */
