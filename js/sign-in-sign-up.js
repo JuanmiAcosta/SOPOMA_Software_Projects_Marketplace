@@ -31,7 +31,7 @@ function pasoMode0(){
     nameuser.style.display = 'none';
     surname.style.display = 'none';
     phone.style.display = 'none';
-    email.style.display = 'block';
+    email.style.display = 'none';
     password2.style.display = 'none';
 }
 
