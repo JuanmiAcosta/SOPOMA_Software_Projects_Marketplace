@@ -16,16 +16,28 @@ const user = document.getElementById('user');
 const inputFields = [nameuser, surname, phone, email, password2];
 
 function validarFormulario() {
-    var contrasena = document.getElementById("password").value;
-    var confirmarContrasena = document.getElementById("2password").value;
 
-    if (contrasena !== confirmarContrasena) {
-        alert("Password does not match");
-        return false; // Evita que el formulario se envíe
+    if (user_mode == 1){
+
+        if (nameuser.value.length == 0 || surname.value.length == 0 || phone.value.length == 0 || email.value.length == 0 || password2.value.length == 0) {
+            alert("All fields are required");
+            return false;
+        }
+
+        var contrasena = document.getElementById("password").value;
+        var confirmarContrasena = document.getElementById("2password").value;
+
+        if (contrasena !== confirmarContrasena) {
+            alert("Password does not match");
+            return false; // Evita que el formulario se envíe
+        }else{
+            // Si las contraseñas coinciden, el formulario se enviará
+            return true;
+        } 
     }else{
-        // Si las contraseñas coinciden, el formulario se enviará
         return true;
-    }   
+    }
+      
 }
 
 function pasoMode1() {
@@ -93,7 +105,6 @@ btn2mobile.onclick = () => {
     }
 }
 
-// SIGN IN / SIGN UP
 
 
 

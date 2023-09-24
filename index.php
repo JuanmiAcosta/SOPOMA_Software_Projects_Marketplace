@@ -48,7 +48,7 @@
             <h1 id="title-form">Sign up</h1>
             <h2 id="subtitle-form">🐧 Welcome back to the system 🐧</h2>
           </hgroup>
-          <form action="php/register_be.php" method="POST" onsubmit="return validarFormulario()">
+          <form action="php/register_login_be.php" method="POST" onsubmit="return validarFormulario()">
             <input
               style="display:none;"
               id="name"
@@ -57,7 +57,7 @@
               placeholder="Name ..."
               aria-label="Name"
               autocomplete="name"
-              required
+              
             />
             <input
               style="display:none;"
@@ -67,7 +67,7 @@
               placeholder="Surname ..."
               aria-label="Surname"
               autocomplete="surname"
-              required
+              
             />
             <input
               style="display:none;"
@@ -77,7 +77,7 @@
               placeholder="Email ..."
               aria-label="Email"
               autocomplete="email"
-              required
+              
             />
             <input
               style="display:none;"
@@ -87,7 +87,7 @@
               placeholder="Phone number ..."
               aria-label="Phone number"
               autocomplete="tel"
-              required
+              
             />
             <input
               type="text"
@@ -111,19 +111,22 @@
               style="display:none;"
               id="2password"
               type="password"
-              name="password"
+              name="2password"
               placeholder="Password again ..."
               aria-label="Password"
               autocomplete="current-password"
-              required
+              
             />
             
             <button id="btn-1" type="submit" class="contrast" >Sign up</button>
-            <button class="btn2-mobile" id="btn-2-mobile" type="submit" class="contrast" onclick="event.preventDefault()">Are you a new user? 🐣</button>
+            
           </form>
+          
+          <button class="btn2-mobile" id="btn-2-mobile"  class="contrast" onclick="event.preventDefault()">Are you a new user? 🐣</button>
+          
         </div>
         <div id="foto">
-          <button id="btn-2" type="submit" class="contrast" onclick="event.preventDefault()">Are you a new user? 🐣</button>
+          <button id="btn-2"  class="contrast" onclick="event.preventDefault()">Are you a new user? 🐣</button>
         </div>
       </article>
     </main>
