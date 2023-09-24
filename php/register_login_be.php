@@ -27,12 +27,12 @@
         $row = $result->fetch_assoc();
 
         if ($row['count'] > 0 ) {
-            echo '
+            echo "
                 <script>
-                    alert("Login completed successfully");
-                    window.location = "../test.html";              
+                    alert('Login completed successfully');
+                    window.location = '../php/content.php?usuario=$usuario';              
                 </script>
-            ';
+            ";
         }else{
             echo '
                 <script>

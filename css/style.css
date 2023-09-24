@@ -7,8 +7,8 @@ body>main {
   padding: 1rem 0;
 }
 
-#logo{
-  border : 3px solid white;
+#logo {
+  border: 3px solid white;
 }
 
 #primer_a {
@@ -98,7 +98,7 @@ article div:nth-of-type(2) {
   color: var(--secondary-hover);
 }
 
- #btn-2-mobile:hover {
+#btn-2-mobile:hover {
   background-color: white;
   color: var(--secondary-hover);
 }
@@ -114,7 +114,7 @@ article div:nth-of-type(2) {
   }
 }
 
-@media (width >= 992px) {
+@media (width >=992px) {
   .btn2-mobile {
     display: none;
   }
@@ -130,3 +130,4 @@ article div:nth-of-type(2) {
 body>footer {
   padding: 1rem 0;
 }
+
