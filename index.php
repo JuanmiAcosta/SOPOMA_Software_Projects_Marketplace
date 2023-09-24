@@ -13,6 +13,8 @@
 
     <!-- Custom styles for this example -->
     <link rel="stylesheet" href="css/style.css" />
+
+
   </head>
 
   <body>
@@ -89,6 +91,7 @@
             />
             <input
               type="text"
+              id="user"
               name="user"
               placeholder="User ..."
               aria-label="Login"
@@ -134,8 +137,10 @@
     <!-- ./ Footer -->
 
     <!-- Minimal theme switcher -->
-    <script src="js/sign-in-sign-up.js"></script>
+    
     <script src="js/minimal-theme-switcher.js"></script>
+
+    <script src="js/sign-in-sign-up.js"></script>
     
   </body>
 </html>

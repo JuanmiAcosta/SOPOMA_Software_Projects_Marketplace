@@ -1,6 +1,11 @@
 <?php
 
-    $conexion = mysqli_connect("localhost","root","","osm_db");
+    $conexion = new mysqli("localhost","root","","osm_db");
+
+    // Verificar la conexión
+    if ($conexion->connect_error) {
+        die("Error en la conexión a la base de datos: " . $conexion->connect_error);
+    }
 
     /*
     if ($conexion) {
@@ -8,9 +13,5 @@
     } else {
         echo 'No se ha podido conectar a la base de datos';
     }
-    */
-
-    
-
-    
+    */  
 ?>
