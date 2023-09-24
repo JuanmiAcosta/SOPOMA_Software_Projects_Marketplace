@@ -1,5 +1,6 @@
 <?php
 
+    // Una Conexión -> Patrón de diseño Singleton
     $conexion = new mysqli("localhost","root","","osm_db");
 
     // Verificar la conexión
@@ -14,4 +15,5 @@
         echo 'No se ha podido conectar a la base de datos';
     }
     */  
+    
 ?>

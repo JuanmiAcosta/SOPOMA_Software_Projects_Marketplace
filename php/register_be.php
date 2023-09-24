@@ -63,4 +63,6 @@
             ';
         }
     }
+
+    mysqli_close($conexion);
 ?>
