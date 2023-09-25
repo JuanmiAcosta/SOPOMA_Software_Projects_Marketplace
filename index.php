@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Sign in / Sign up - OSM</title>
     <meta name="description" content="A minimalist sign in page. Built with Pico CSS." />
-    <link rel="shortcut icon" href="icon/light.jpeg" />
+    <link rel="shortcut icon" href="icon/logo.png" />
     <link rel="canonical" href="https://picocss.com/examples/sign-in/" />
 
     <!-- Pico.css -->

@@ -8,9 +8,9 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Main content</title>
+    <title>OSM App</title>
     <meta name="description" content="The main content area." />
-    <link rel="shortcut icon" href="icon/light.jpeg" />
+    <link rel="shortcut icon" href="icon/logo.png" />
     <link rel="canonical" href="https://picocss.com/examples/sign-in/" />
 
     <!-- Pico.css -->

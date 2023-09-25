@@ -17,7 +17,7 @@ const inputFields = [nameuser, surname, phone, email, password2];
 
 function validarFormulario() {
 
-    if (user_mode == 1){
+    if (user_mode == 1){ // Si estoy en modo registro
 
         if (nameuser.value.length == 0 || surname.value.length == 0 || phone.value.length == 0 || email.value.length == 0 || password2.value.length == 0) {
             alert("All fields are required");
