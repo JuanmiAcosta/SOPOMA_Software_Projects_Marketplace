@@ -32,13 +32,13 @@ git add .
 Realice un commit de los cambios:
 
 ```
-git commit -m "Commit inicial"
+git commit -m "Primer commit de <NOMBRE>"
 ```
 
 Añada el repositorio remoto:
 
 ```
-git remote add origin <URL_DEL_REPOSITORIO>
+git remote add origin https://github.com/JuanmiAcosta/PracticaDDSI-OSM.git
 ```
 
 Ejecute el siguiente comando para clonar el historial de commits del repositorio remoto:
