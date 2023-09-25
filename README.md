@@ -10,7 +10,7 @@ Desarrollo en grupo (Los Pollos Hermanos) de un SI. Pretende ser en primera inst
 </ul>
 
 ```
-git clone <URL_DEL_REPOSITORIO>
+git clone https://github.com/JuanmiAcosta/PracticaDDSI-OSM.git
 ```
 
 Esto creará un nuevo directorio con el nombre del repositorio.
