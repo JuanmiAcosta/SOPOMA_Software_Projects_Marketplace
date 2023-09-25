@@ -72,6 +72,7 @@ function pasoMode0() {
     subtitle.innerHTML = '🐧 Welcome back to the system 🐧';
 
     for (const field of inputFields) {
+        field.value = '';
         field.style.display = 'none';
         field.removeAttribute('required');
     }
