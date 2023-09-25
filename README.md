@@ -18,6 +18,7 @@ Esto creará un nuevo directorio con el nombre del repositorio.
 <li>Cambie al directorio del repositorio clonado.</li>
 <li>Ejecute el siguiente comando para inicializar el repositorio local:</li>
 </ul>
+
 ```
 git init
 ```
