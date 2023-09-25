@@ -1,6 +1,8 @@
 # PracticaDDSI-OSM
 Desarrollo en grupo (Los Pollos Hermanos) de un SI. Pretende ser en primera instancia un Marketplace para proyectos de software libre en el que los usuarios colaboradores participaran en ellos de diversas maneras a escoger.
 
+![Imagen representativa](https://github.com/JuanmiAcosta/PracticaDDSI-OSM/blob/main/icon/dark.jpg)
+
 ## Para clonar un repositorio de GitHub en un directorio local, siga estos pasos:
 
 <ul>
