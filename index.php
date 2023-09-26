@@ -118,15 +118,15 @@
               
             />
             
-            <button id="btn-1" type="submit" class="contrast" >Sign up</button>
+            <button style="font-weight: bold;" id="btn-1" type="submit" class="contrast" >Sign up</button>
             
           </form>
           
-          <button class="btn2-mobile" id="btn-2-mobile"  class="contrast" onclick="event.preventDefault()">Are you a new user? 🐣</button>
+          <button class="btn2-mobile" id="btn-2-mobile" style="font-weight: bold;" class="contrast" onclick="event.preventDefault()">Are you a new user? 🐣</button>
           
         </div>
         <div id="foto">
-          <button id="btn-2"  class="contrast" onclick="event.preventDefault()">Are you a new user? 🐣</button>
+          <button id="btn-2" style="font-weight: bold;" class="contrast" onclick="event.preventDefault()">Are you a new user? 🐣</button>
         </div>
       </article>
     </main>
@@ -134,7 +134,7 @@
 
     <!-- Footer -->
     <footer class="container-fluid">
-      <small >Built with <a href="https://picocss.com" class="secondary">Pico</a> •
+      <small >
         Made by "Los Pollos Hermanos" </small>
     </footer>
     <!-- ./ Footer -->

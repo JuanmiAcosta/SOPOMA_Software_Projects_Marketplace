@@ -11,12 +11,7 @@ $usuario = $_GET['usuario'];
     <title>OSM App</title>
     <meta name="description" content="The main content area." />
     <link rel="shortcut icon" href="../icon/logo.png" />
-    <link rel="canonical" href="https://picocss.com/examples/sign-in/" />
 
-    <!-- Pico.css -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css" />
-
-    <!-- Custom styles for this example -->
     <link rel="stylesheet" href="../css/style-main.css" />
 
 
@@ -24,13 +19,11 @@ $usuario = $_GET['usuario'];
 
 <body>
 
-    <main class="container">
         <div id="prueba">
             <h1>🐧 Welcome,
                 <?php echo $usuario; ?> 🐧
             </h1>
         </div>
-    </main>
 
 </body>
 
