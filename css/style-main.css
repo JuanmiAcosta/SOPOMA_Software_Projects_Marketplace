@@ -1,49 +1,10 @@
-body {
+body{
     display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh; /* Esto asegura que el cuerpo ocupe toda la altura de la ventana */
-    margin: 0;
+    flex-direction: column;  
 }
 
 #prueba {
     text-align: center;
     line-height: 100px; /* Alineación vertical del contenido */
-}
-
-body>main {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    min-height: calc(100vh - 7rem);
-    padding: 1rem 0;
-}
-
-#logo {
-    border: 3px solid white;
-}
-
-@media (min-width: 576px) {
-    body>main {
-        padding: 1.25rem 0;
-    }
-}
-
-@media (min-width: 768px) {
-    body>main {
-        padding: 1.5rem 0;
-    }
-}
-
-@media (min-width: 992px) {
-    body>main {
-        padding: 1.75rem 0;
-    }
-}
-
-@media (min-width: 1200px) {
-    body>main {
-        padding: 2rem 0;
-    }
 }
 

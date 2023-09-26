@@ -12,6 +12,7 @@ body>main {
 }
 
 #primer_a {
+  width:80%;
   display: flex;
   /* Usar flexbox para la disposición */
   align-items: center;
