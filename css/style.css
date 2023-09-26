@@ -22,8 +22,13 @@ body>main {
   justify-content: center;
 }
 
+#primer_a a{
+  margin-right: 20px;
+}
+
 #btn-2 {
   background-color: #374956;
+  opacity: 90%;
 }
 
 #btn-2-mobile {
