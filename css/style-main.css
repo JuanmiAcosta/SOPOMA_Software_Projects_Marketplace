@@ -1,6 +1,8 @@
 body{
     display: flex;
-    flex-direction: column;  
+    /*PROVISIONAL*/
+    align-items: center;
+    justify-content: center;
 }
 
 #prueba {

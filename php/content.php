@@ -17,10 +17,10 @@ $usuario = $_GET['usuario'];
 
 </head>
 
-<body>
+<body style="background-color: #11191f; font-family: 'system-ui', sans-serif;">
 
         <div id="prueba">
-            <h1>🐧 Welcome,
+            <h1 style="color:white;">🐧 Welcome,
                 <?php echo $usuario; ?> 🐧
             </h1>
         </div>
