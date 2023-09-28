@@ -3,15 +3,13 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Sign in / Sign up - OSM</title>
+    <title>Sign in / Sign up - SOPOMA</title>
     <meta name="description" content="A minimalist sign in page. Built with Pico CSS." />
     <link rel="shortcut icon" href="icon/logo.png" />
     <link rel="canonical" href="https://picocss.com/examples/sign-in/" />
 
     <!-- Pico.css -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css" />
-
-    <!-- Custom styles for this example -->
     <link rel="stylesheet" href="css/style.css" />
 
 
@@ -96,7 +94,6 @@
               placeholder="User ..."
               aria-label="Login"
               autocomplete="nickname"
-              required
             />
             <input
               type="password"
@@ -105,7 +102,6 @@
               placeholder="Password ..."
               aria-label="Password"
               autocomplete="current-password"
-              required
             />
             <input
               style="display:none;"
@@ -117,7 +113,8 @@
               autocomplete="current-password"
               
             />
-            
+            <h5 id="allrequired" style="color:red; display:none;">All fields are required</h5>
+            <h5 id="passmatch" style="color:red; display:none;">Passwords do not match</h5>
             <button style="font-weight: bold;" id="btn-1" type="submit" class="contrast" >Sign up</button>
             
           </form>
@@ -142,7 +139,6 @@
     <!-- Minimal theme switcher -->
     
     <script src="js/minimal-theme-switcher.js"></script>
-
     <script src="js/sign-in-sign-up.js"></script>
     
   </body>

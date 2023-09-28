@@ -11,33 +11,62 @@ const password2 = document.getElementById('2password');
 const phone = document.getElementById('phone');
 const surname = document.getElementById('surname');
 const user = document.getElementById('user');
+const password = document.getElementById('password');
 
 // Assuming you have an array of your input fields in order
-const inputFields = [nameuser, surname, phone, email, password2];
+const inputFields = [nameuser, surname, phone, email, password2, user, password];
 
 function validarFormulario() {
 
-    if (user_mode == 1){ // Si estoy en modo registro
+    // Vuelvo a instanciar aquí porque si no el submit del form de HTML no funciona correctamente
+    var nameuser = document.getElementById('name');
+    var email = document.getElementById('email');
+    var password2 = document.getElementById('2password');
+    var phone = document.getElementById('phone');
+    var surname = document.getElementById('surname');
+    var user = document.getElementById('user');
+    var password = document.getElementById('password');
 
-        if (nameuser.value.length == 0 || surname.value.length == 0 || phone.value.length == 0 || email.value.length == 0 || password2.value.length == 0) {
+    //regex para validar email
+    var regexEmail = /\S+@\S+\.\S+/;
+
+    if (user_mode == 1) { // Si estoy en modo registro
+
+        console.log('user_mode == 1');
+
+        if (nameuser.value.length == 0 || surname.value.length == 0 || phone.value.length == 0 || email.value.length == 0
+            || password2.value.length == 0 || user.value.length == 0 || password.value.length == 0) {
             alert("All fields are required");
             return false;
         }
 
-        var contrasena = document.getElementById("password").value;
-        var confirmarContrasena = document.getElementById("2password").value;
+        if (!regexEmail.test(email.value)) { //NO ESTA FUNCIONANDO
+            alert("Email is not valid");
+            return false;
+        }
+
+        var contrasena = password.value;
+        var confirmarContrasena = password2.value;
 
         if (contrasena !== confirmarContrasena) {
             alert("Password does not match");
             return false; // Evita que el formulario se envíe
-        }else{
+        } else {
             // Si las contraseñas coinciden, el formulario se enviará
             return true;
-        } 
-    }else{
-        return true;
+        }
+    } else if (user_mode == 0) { // Si estoy en modo login
+
+        console.log('user_mode == 0');
+
+        if (user.value.length == 0 || password.value.length == 0) {
+            alert("All fields are required");
+            return false;
+
+        } else {
+            return true;
+        }
     }
-      
 }
 
 function pasoMode1() {
