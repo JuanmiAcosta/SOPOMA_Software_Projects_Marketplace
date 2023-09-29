@@ -1,7 +1,7 @@
 <?php
 
     // Una Conexión -> Patrón de diseño Singleton
-    $conexion = new mysqli("localhost","root","","osm_db");
+    $conexion = new mysqli("localhost","root","","sopoma_bd");
 
     // Verificar la conexión
     if ($conexion->connect_error) {
