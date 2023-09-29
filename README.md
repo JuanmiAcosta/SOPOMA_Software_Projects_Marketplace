@@ -5,7 +5,37 @@ Desarrollo en grupo de un Sistema de Información. Pretende ser en primera insta
   <img src="https://github.com/JuanmiAcosta/PracticaDDSI-OSM/blob/main/icon/logo.png?raw=true" alt="Imagen representativa">
 </p>
 
-## Para clonar un repositorio de GitHub en un directorio local, siga estos pasos:
+## Para empezar con XAMPP y su base de datos local:
+
+<ul>
+<li>Descarga e instala XAMPP, preferiblemente en windows.</li>
+<li>Para levantar los servicios y ver "phpmyadmin" (ver la base de datos, las tablas, modificar datos, crear tablas...) has de abrir XAMPP y activar Apache y MySQL.</li>
+<li>Activa Apache(Servidor) y MySQL(SGBD)</li>
+<li>Dale a admin en MySQL</li>
+<li>Crea una base de datos llamada exactamente "sopoma_bd" con formato "utf8mb4_spanish_ci".</li>
+<li>Crea la primera tabla (apartado SQL) para comprobar que todo funcione y empezar a probar el register y login:</li>
+</ul>
+
+```
+CREATE TABLE Users (
+    email VARCHAR(50) PRIMARY KEY,
+    user VARCHAR(50) NOT NULL UNIQUE,
+    name VARCHAR(50) NOT NULL,
+    surname VARCHAR(50) NOT NULL,
+    password VARCHAR(50) NOT NULL,
+    phone VARCHAR(9) NOT NULL
+);
+```
+
+Ahora debes saber que la ruta para alojar el directorio del proyecto es : "C:\xampp\htdocs".
+
+Esto se debe a quue al levantar el servidor sólo se ven los servicios de ese directorio.
+
+Ahora cuando actives Apache y MySQL podrás buscar "localhost/<NOMBRE_DE_TU_DIRECTORIO>" para ver tu proyecto.
+
+<h2 style="color:red; font-weight:bold;">IMPORTANTE CTRL+F5 EN LA PÁGINA PARA ACTUUALIZAR TODO EL CÓDIGO DE LA PÁGINA</h2>
+
+## Para clonar el repositorio de GitHub en un directorio local, siga estos pasos:
 
 <ul>
 <li>Abra una terminal.</li>
