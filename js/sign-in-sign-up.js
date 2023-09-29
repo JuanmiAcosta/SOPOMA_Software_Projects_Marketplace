@@ -25,6 +25,9 @@ function validarFormulario() {
     //regex para validar email
     var regexEmail = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
 
+    //regex para validar telefono con 9 digitos
+    var regexPhone = /^[0-9]{9}$/;
+
     if (user_mode == 1) { // Si estoy en modo registro
 
         if (nameuser.value.length == 0 || surname.value.length == 0 || phone.value.length == 0 || email.value.length == 0
@@ -36,7 +39,14 @@ function validarFormulario() {
 
         // Validación de email
         else if (!(regexEmail.test(email.value))) {
-            error.innerHTML = 'Invalid email';
+            error.innerHTML = 'Invalid email format';
+            error.style.display = 'block';
+            return false;
+        }
+
+        // Validación de teléfono
+        else if (!(regexPhone.test(phone.value))) {
+            error.innerHTML = 'Invalid phone format. Only 9 digits allowed (Spanish format)';
             error.style.display = 'block';
             return false;
         }
