@@ -9,7 +9,7 @@ Desarrollo en grupo de un Sistema de Información. Pretende ser en primera insta
 
 <ul>
 <li>Descarga e instala XAMPP, preferiblemente en windows.</li>
-<li>Para levantar los servicios y ver "phpmyadmin" (ver la base de datos, las tablas, modificar datos, crear tablas...) has de abrir XAMPP y activar Apache y MySQL.</li>
+<li>Para levantar los servicios y ver "phpmyadmin" (ver la base de datos, las tablas, modificar datos, crear tablas...) has de abrir XAMPP.</li>
 <li>Activa Apache(Servidor) y MySQL(SGBD)</li>
 <li>Dale a admin en MySQL</li>
 <li>Crea una base de datos llamada exactamente "sopoma_bd" con formato "utf8mb4_spanish_ci".</li>
@@ -27,15 +27,14 @@ CREATE TABLE Users (
 );
 ```
 
-Ahora debes saber que la ruta para alojar el directorio del proyecto es : "C:\xampp\htdocs".
+Ahora debes saber que la ruta para alojar el directorio del proyecto es : "C:\xampp\htdocs". CREA UN DIRECTORIO VACÍO CON EL NOMBRE DEL PROYECTO ROLLO "SOPOMA", MÁS ADELANTE CLONARÁS EN ESE DIRECTORIO EL REPOSITORIO DE GITHUB.
 
-Esto se debe a quue al levantar el servidor sólo se ven los servicios de ese directorio.
+Esto se debe a que al levantar el servidor sólo se ven los servicios de ese directorio.
 
-Ahora cuando actives Apache y MySQL podrás buscar "localhost/<NOMBRE_DE_TU_DIRECTORIO>" para ver tu proyecto.
+Ahora siempre que actives Apache y MySQL, y tengas el directorio con el proyecto en la ruta correcta podrás buscar "localhost/<NOMBRE_DE_TU_DIRECTORIO>" para ver tu proyecto.
 
 > [!WARNING]
 > <h2 style="color:red; font-weight:bold;">IMPORTANTE CTRL+F5 EN LA PÁGINA PARA ACTUALIZAR TODO EL CÓDIGO DE LA PÁGINA</h2>
-
 
 ## Para clonar el repositorio de GitHub en un directorio local, siga estos pasos:
 
