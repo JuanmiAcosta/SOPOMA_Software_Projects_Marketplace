@@ -33,7 +33,9 @@ Esto se debe a quue al levantar el servidor sólo se ven los servicios de ese di
 
 Ahora cuando actives Apache y MySQL podrás buscar "localhost/<NOMBRE_DE_TU_DIRECTORIO>" para ver tu proyecto.
 
-<h2 style="color:red; font-weight:bold;">IMPORTANTE CTRL+F5 EN LA PÁGINA PARA ACTUUALIZAR TODO EL CÓDIGO DE LA PÁGINA</h2>
+> [!WARNING]
+> <h2 style="color:red; font-weight:bold;">IMPORTANTE CTRL+F5 EN LA PÁGINA PARA ACTUUALIZAR TODO EL CÓDIGO DE LA PÁGINA</h2>
+
 
 ## Para clonar el repositorio de GitHub en un directorio local, siga estos pasos:
 
