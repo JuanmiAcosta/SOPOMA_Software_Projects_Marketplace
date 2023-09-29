@@ -1,4 +1,6 @@
-let user_mode = 0 // 0 -> sign up 1 -> sign in
+//IMPORTANTISIMO, SI VES QUE ALGO DSE TU CÓDIGO NO FUNCIONA BIEN PRUEBA CTRL+F5 PARA ACTUALIZAR CODIGO EN XAMPSERVER
+
+var user_mode = 0 // 0 -> sign up 1 -> sign in
 
 const btn1 = document.getElementById('btn-1');
 const btn2 = document.getElementById('btn-2');
@@ -13,56 +15,51 @@ const surname = document.getElementById('surname');
 const user = document.getElementById('user');
 const password = document.getElementById('password');
 
+const error = document.getElementById('error');
+
 // Assuming you have an array of your input fields in order
-const inputFields = [nameuser, surname, phone, email, password2, user, password];
+var inputFields = [nameuser, surname, phone, email, password2];
 
 function validarFormulario() {
 
-    // Vuelvo a instanciar aquí porque si no el submit del form de HTML no funciona correctamente
-    var nameuser = document.getElementById('name');
-    var email = document.getElementById('email');
-    var password2 = document.getElementById('2password');
-    var phone = document.getElementById('phone');
-    var surname = document.getElementById('surname');
-    var user = document.getElementById('user');
-    var password = document.getElementById('password');
-
     //regex para validar email
-    var regexEmail = /\S+@\S+\.\S+/;
+    var regexEmail = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
 
     if (user_mode == 1) { // Si estoy en modo registro
 
-        console.log('user_mode == 1');
-
         if (nameuser.value.length == 0 || surname.value.length == 0 || phone.value.length == 0 || email.value.length == 0
             || password2.value.length == 0 || user.value.length == 0 || password.value.length == 0) {
-            alert("All fields are required");
+            error.innerHTML = 'All fields are required';
+            error.style.display = 'block';
             return false;
         }
 
-        if (!regexEmail.test(email.value)) { //NO ESTA FUNCIONANDO
-            alert("Email is not valid");
+        // Validación de email
+        else if (!(regexEmail.test(email.value))) {
+            error.innerHTML = 'Invalid email';
+            error.style.display = 'block';
             return false;
         }
 
-        var contrasena = password.value;
-        var confirmarContrasena = password2.value;
+        else {
+            var contrasena = password.value;
+            var confirmarContrasena = password2.value;
 
-        if (contrasena !== confirmarContrasena) {
-            alert("Password does not match");
-            return false; // Evita que el formulario se envíe
-        } else {
-            // Si las contraseñas coinciden, el formulario se enviará
-            return true;
+            if (contrasena !== confirmarContrasena) {
+                error.innerHTML = 'Passwords do not match';
+                error.style.display = 'block';
+                return false; // Evita que el formulario se envíe
+            } else {
+                // Si las contraseñas coinciden, el formulario se enviará
+                return true;
+            }
         }
     } else if (user_mode == 0) { // Si estoy en modo login
 
-        console.log('user_mode == 0');
-
         if (user.value.length == 0 || password.value.length == 0) {
-            alert("All fields are required");
+            error.innerHTML = 'All fields are required';
+            error.style.display = 'block';
             return false;
-
         } else {
             return true;
         }
@@ -77,22 +74,18 @@ function pasoMode1() {
     title.innerHTML = 'Sign in';
     subtitle.innerHTML = '🐣 Register for a OSM experience 🐣';
 
-    for (const field of inputFields) {
-        if (field.style.display !== 'none') {
-            field.focus();
-            break;
-        }
+    for (var field of inputFields) {
+        field.value = '';
+        field.style.display = 'block';
     }
 
-    nameuser.style.display = 'block';
-    surname.style.display = 'block';
-    phone.style.display = 'block';
-    email.style.display = 'block';
-    password2.style.display = 'block';
+    error.innerHTML = '';
+    error.style.display = 'none';
     console.log('pasoMode1');
 }
 
 function pasoMode0() {
+
     user_mode = 0;
     btn1.innerHTML = 'Sign up';
     btn2.innerHTML = 'Are you a new user? 🐣';
@@ -100,19 +93,18 @@ function pasoMode0() {
     title.innerHTML = 'Sign up';
     subtitle.innerHTML = '🐧 Welcome back to the system 🐧';
 
-    for (const field of inputFields) {
+    for (var field of inputFields) {
         field.value = '';
         field.style.display = 'none';
-        field.removeAttribute('required');
     }
+    
+    user.style.display = 'block';
+    password.style.display = 'block';
 
-    nameuser.style.display = 'none';
-    surname.style.display = 'none';
-    phone.style.display = 'none';
-    email.style.display = 'none';
-    password2.style.display = 'none';
+    error.innerHTML = '';
+    error.style.display = 'none';
+
     console.log('pasoMode0');
-
 }
 
 //En el modo 0 el boton sign up es el 1 y el sign in el 2

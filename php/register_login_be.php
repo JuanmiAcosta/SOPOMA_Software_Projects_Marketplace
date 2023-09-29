@@ -89,7 +89,7 @@
             } else {
                 echo '
                     <script>
-                        alert("Register failed. Must be another user with that email or username");
+                        alert("Register failed. Try again later (Technical error)");
                         window.location = "../index.php";
                     </script>
                 ';
