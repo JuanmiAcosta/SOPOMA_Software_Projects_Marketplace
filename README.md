@@ -8,7 +8,7 @@ Desarrollo en grupo de un Sistema de Información. Pretende ser en primera insta
 ## Para empezar con XAMPP y su base de datos local:
 
 <p align="center">
-  <img src="[https://github.com/JuanmiAcosta/PracticaDDSI-OSM/blob/main/icon/logo.png?raw=true](https://www.google.com/imgres?imgurl=https%3A%2F%2Fwww.luisllamas.es%2Fwp-content%2Fuploads%2F2018%2F01%2Finstalar-servidor-web-xampp.png&tbnid=ygNo9eCNC_hIgM&vet=12ahUKEwi5usPAntKBAxVjpCcCHUv9C-0QMygBegQIARB2..i&imgrefurl=https%3A%2F%2Fwww.luisllamas.es%2Finstalar-servidor-web-xampp%2F&docid=RBBAxqyDkHo5LM&w=400&h=266&q=xampp&ved=2ahUKEwi5usPAntKBAxVjpCcCHUv9C-0QMygBegQIARB2)" alt="Imagen representativa">
+  <img src="https://github.com/JuanmiAcosta/SOPOMA_Software_Projects_Marketplace/blob/main/xampp.png?raw=true" alt="Imagen representativa">
 </p>
 
 
