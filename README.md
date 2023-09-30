@@ -27,7 +27,7 @@ CREATE TABLE Users (
 );
 ```
 
-Ahora debes saber que la ruta para alojar el directorio del proyecto es : "C:\xampp\htdocs". CREA UN DIRECTORIO VACÍO CON EL NOMBRE DEL PROYECTO ROLLO "SOPOMA", MÁS ADELANTE CLONARÁS EN ESE DIRECTORIO EL REPOSITORIO DE GITHUB.
+Ahora debes saber que la ruta para alojar el directorio del proyecto es : "C:\xampp\htdocs". CREA UN DIRECTORIO VACÍO CON EL NOMBRE DE "SOPOMA", MÁS ADELANTE CLONARÁS EN ESE DIRECTORIO EL REPOSITORIO DE GITHUB.
 
 Esto se debe a que al levantar el servidor sólo se ven los servicios de ese directorio.
 

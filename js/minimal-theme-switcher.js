@@ -63,21 +63,10 @@ const themeSwitcher = {
         this.applyScheme();
         //Change the logo to the dark one
         if (this._scheme == "dark") {
-            document.getElementById("logo").src = "icon/dark.jpg";
             document.querySelector("article div:nth-of-type(2)").style.backgroundImage = "url('icon/light.jpeg')";
         } else {
-            document.getElementById("logo").src = "icon/light.jpeg";
             document.querySelector("article div:nth-of-type(2)").style.backgroundImage = "url('icon/dark.jpg')";
         }
-
-        //Change the "article div:nth-of-type(2)" backgroung-image when its dark mode
-        if (this._scheme == "dark") {
-            
-        } else {
-            
-        }
-
-
         this.schemeToLocalStorage();
     },
 
