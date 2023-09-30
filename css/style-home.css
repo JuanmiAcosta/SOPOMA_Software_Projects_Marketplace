@@ -3,6 +3,7 @@
     margin: 0;
     padding: 0;
     font-size: 20px;
+    list-style: none;
 }
 
 .container {
@@ -18,10 +19,12 @@
             hsl(218deg 49% 26%) 80%,
             hsl(218deg 49% 28%) 90%,
             hsl(218deg 49% 30%) 100%);
-    background-size: calc(100% - 95px) ; /*todo menos el nav*/
+    background-size: 100%; /*todo menos el nav*/
     width: 100%;
-    height: 100vh;
+    height: calc(100vh - 95px);
 }
+
+/* ------------------ NAVBAR ------------------ */
 
 .header {
     background-color: #11191f;
@@ -47,12 +50,16 @@
     margin-right: auto;
 }
 
-.header .nav .links {
+nav ul {
+    float : right;
     list-style: none;
 }
 
-.header .nav-links li {
+nav ul li {
     display: inline-block;
+}
+
+.header .nav-links li {
     padding: 10px 20px;
     transition: all 0.3s;
 }
@@ -69,25 +76,6 @@
 
 .header .nav-links li a:hover {
     color: #394974;
-}
-
-#prueba {
-    text-align: center;
-    line-height: 100px;
-    /*centrarlo en los dos ejes*/
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); 
-}
-
-#prueba h1{
-    font-size: 40px;
-    color: white;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    margin-bottom: 20px;
 }
 
 .header .logo img:hover {
@@ -111,3 +99,71 @@
     background: #394974;
     color: #002544
 }
+
+.checkbtn{
+    font-size:40px;
+    color:white;
+    float:right;
+    line-height:95px;
+    margin-right:10px;
+    cursor:pointer;
+    display:none;
+}
+
+#check{
+    display:none;
+}
+
+@media (max-width: 1050px){
+
+    .checkbtn{
+        display:block;
+    }
+    .header .nav-links{
+        position:fixed;
+        height:100vh;
+        width:100%;
+        background:#11191f;
+        top:95px;
+        left:-100%;
+        text-align:center;
+        transition:all .5s;
+        z-index:2;
+    }
+
+    .header .nav-links li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+
+    .header .nav-links li a{
+        font-size:20px;
+    } 
+
+    #check:checked ~ ul{
+        left:0;
+    }
+}
+
+/* ------------------ NAVBAR ------------------ */
+
+#prueba {
+    text-align: center;
+    line-height: 100px;
+    /*centrarlo en los dos ejes*/
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+}
+
+#prueba h1{
+    font-size: 40px;
+    color: white;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
