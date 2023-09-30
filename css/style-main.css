@@ -74,6 +74,20 @@
 #prueba {
     text-align: center;
     line-height: 100px;
+    /*centrarlo en los dos ejes*/
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+}
+
+#prueba h1{
+    font-size: 40px;
+    color: white;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
 }
 
 .header .logo img:hover {

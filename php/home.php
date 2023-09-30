@@ -20,9 +20,15 @@ $usuario = $_GET['usuario'];
 
     <header class="header">
         <div class="logo">
-            <a href='#'>
-                <img src="../icon/logo.png" alt="logo" />
-            </a>
+            <!-- la que hay que liar para pasar la variable usuario de un lao pa otro -->
+            <?php
+
+                echo'<a href="sendhome.php?usuario='.urlencode($usuario).'">
+            
+                        <img src="../icon/logo.png" alt="logo" />
+
+                    </a>'
+            ?>
         </div>
         <nav>
             <ul class="nav-links">

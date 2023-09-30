@@ -30,7 +30,7 @@
             echo "
                 <script>
                     alert('Login completed successfully');
-                    window.location = '../php/content.php?usuario=$usuario';              
+                    window.location = '../php/home.php?usuario=$usuario';              
                 </script>
             ";
         }else{
