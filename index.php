@@ -20,10 +20,13 @@
   <nav class="container-fluid">
     <ul>
       <li>
-        <div id="primer_a"><a href="./" class="contrast" onclick="event.preventDefault()"><strong><img id="logo"
-                style="width:5rem; border-radius:50%; margin-right: 20px;" src="icon/dark.jpg" alt="Icono">
-            </strong></a>
-          <h1 id="textlogo" style="font-weight:bold; margin-bottom:0px;">OSM Open Software Marketplace</h1>
+        <div id="primer_a">
+          <a href="index.php" class="contrast" onclick="event.preventDefault()">
+            <strong>
+              <img id="logo" style="width:5rem; border-radius:50%; margin-right: 20px;" src="icon/logo.png" alt="Icono">
+            </strong>
+          </a>
+          <h1 id="textlogo" style="font-weight:bold; margin-bottom:0px;">SOPOMA Software Projects Marketplace</h1>
         </div>
       </li>
     </ul>

@@ -9,6 +9,12 @@ body>main {
 
 #logo {
   border: 3px solid white;
+  cursor:pointer;
+  transition: all 0.3s;
+}
+
+#logo:hover {
+  transform: scale(1.2);
 }
 
 #primer_a {
