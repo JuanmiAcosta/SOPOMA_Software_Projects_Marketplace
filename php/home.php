@@ -1,5 +1,17 @@
 <?php
-$usuario = $_GET['usuario'];
+    session_start();
+    if (!isset($_SESSION['usuario'])) {
+        echo '
+            <script>
+                alert("You must login first");      
+                window.location = "../index.php";      
+            </script>
+        ';
+        session_destroy();
+        die();
+    }else{
+        $usuario = $_SESSION['usuario'];
+    }
 ?>
 
 <!DOCTYPE html>
@@ -42,9 +54,14 @@ $usuario = $_GET['usuario'];
                 <li><a href="#">Projects</a></li>
                 <li><a href="#">Profiles</a></li>
                 <li><a href="#">About us</a></li>
-                <li><a href="#" class="btn"><button>@
+                <li><a href="#" class="btn">
+                        <button>@
                             <?php echo $usuario; ?>'s place
-                        </button></a></li>
+                        </button>
+                    </a>
+                </li>
+                <!-- poner icono sign out --> 
+                <li><a href="../php/close_session.php">Close session</a></li>
             </ul>
         </nav>
 

@@ -10,14 +10,16 @@
     $telefono = $_POST['phone'];
     $usuario = $_POST['user'];
     $contrasena = $_POST['password'];
+    $contrasena = hash('sha512', $contrasena); // Encriptamos la contraseña (sha512)
 
-    //ESTO ES UN POCO CHAPUZA PORQUE SOKLO HAY UN FORMULARIO PARA LOGIN Y REGISTER
-    //POR LO QUE SI NO SE RELLENAN LOS CAMPOS DE REGISTER ES PORQUE ES UN LOGIN
+    //DIFERERNCIAMOS ENTRE LOGIN Y REGISTRO POR LOS INPUT VISIBLES ( CON LONGITUD 0 O NO)
 
     if (empty($nombre) && empty($apellido) && empty($email) && empty($telefono)) { //ES PORQUE ES UN LOGIN
 
-        $usuario = $_POST['user'];
+        session_start();
+
         $contrasena = $_POST['password'];
+        $contrasena = hash('sha512', $contrasena); // Desencriptamos la contraseña (sha512)
 
         $sql = "SELECT COUNT(*) as count FROM users WHERE user = ? AND password = ?";
         $stmt = $conexion->prepare($sql);
@@ -27,6 +29,9 @@
         $row = $result->fetch_assoc();
 
         if ($row['count'] > 0 ) {
+
+            $_SESSION['usuario']=$usuario;
+
             echo "
                 <script>
                     alert('Login completed successfully');

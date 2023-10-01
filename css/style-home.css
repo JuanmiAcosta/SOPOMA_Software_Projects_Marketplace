@@ -114,7 +114,13 @@ nav ul li {
     display:none;
 }
 
-@media (max-width: 1050px){
+.close{
+    font-size:40px;
+    color:white;
+    cursor:pointer;
+}
+
+@media (max-width: 1253px){
 
     .checkbtn{
         display:block;
