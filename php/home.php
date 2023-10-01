@@ -56,8 +56,7 @@ $usuario = $_GET['usuario'];
 
         <div id="prueba">
             <h1 style="color:white;">🐧 Welcome,
-                @
-                <?php echo $usuario; ?> 🐧
+                <?php echo "@$usuario" ?> 
             </h1>
         </div>
 
