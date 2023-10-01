@@ -53,7 +53,6 @@ if (!isset($_SESSION['usuario'])) {
                 <li><a href="#">Home</a></li>
                 <li><a href="#">Projects</a></li>
                 <li><a href="#">Profiles</a></li>
-                <li><a href="#">About us</a></li>
                 <li><a href="#" class="btn">
                         <button>@
                             <?php echo $usuario; ?>'s place
@@ -61,7 +60,7 @@ if (!isset($_SESSION['usuario'])) {
                     </a>
                 </li>
                 <!-- poner icono sign out -->
-                <li><a href="../php/close_session.php"><svg xmlns="http://www.w3.org/2000/svg" height="1em"
+                <li><a href="../php/close_session.php"><svg id="puerta" xmlns="http://www.w3.org/2000/svg" height="1em"
                             viewBox="0 0 576 512">
                             <style>
                                 svg {
@@ -78,14 +77,13 @@ if (!isset($_SESSION['usuario'])) {
 
     <div class="container">
 
-        <div id="prueba">
-            <h1 style="color:white;">🐧 Welcome,
+        <div id="welcome">
+            <h1 id="welcome_h1" style="color:white;">🐧 Welcome,
                 <?php echo "@$usuario" ?>
             </h1>
         </div>
 
     </div>
-    </script>
 
 </body>
 
