@@ -12,4 +12,4 @@ function typeWelcome(){
 
 typeWelcome();
 
-setInterval(typeWelcome, 15000);
+setInterval(typeWelcome, 50000);
