@@ -51,10 +51,10 @@ if (!isset($_SESSION['usuario'])) {
             </label>
 
             <ul class="nav-links">
-                
+
                 <li><?php
                     echo '<a href="sendhome.php?usuario=' . urlencode($usuario) . '">
-                        <img src="../icon/logo.png" alt="logo" />
+                        Home
                     </a>'?>
                 </li>
 
