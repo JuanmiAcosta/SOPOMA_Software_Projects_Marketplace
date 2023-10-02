@@ -19,9 +19,9 @@
             hsl(218deg 49% 26%) 80%,
             hsl(218deg 49% 28%) 90%,
             hsl(218deg 49% 30%) 100%);
-    background-size: 100%; /*todo menos el nav*/
+    background-size: 100%; 
     width: 100%;
-    height: calc(100vh - 95px);
+    height: calc(100vh - 95px); /*todo menos el nav*/
 }
 
 /* ------------------ NAVBAR ------------------ */
@@ -169,11 +169,12 @@ nav ul li {
     transform: translate(-50%, -50%); 
 }
 
-#welcome h1{
+#welcome_h1{
     font-size: 30px;
     color: white;
-    font-weight: 500;
+    font-weight: 700;
     letter-spacing: 2px;
     margin-bottom: 20px;
 }
+
 

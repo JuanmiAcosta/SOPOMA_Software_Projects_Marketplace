@@ -78,12 +78,14 @@ if (!isset($_SESSION['usuario'])) {
     <div class="container">
 
         <div id="welcome">
-            <h1 id="welcome_h1" style="color:white;">🐧 Welcome,
-                <?php echo "@$usuario" ?>
+            <h1>
+                <span id="welcome_h1" style="color:white;">🐧 Welcome, <?php echo "@$usuario" ?></span>
             </h1>
         </div>
 
     </div>
+
+    <script src="../js/welcome.js"></script>
 
 </body>
 
