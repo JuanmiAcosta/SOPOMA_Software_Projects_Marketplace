@@ -164,7 +164,7 @@ nav ul li {
     line-height: 50px;
     /*centrarlo en los dos ejes*/
     position: absolute;
-    top: 25%;
+    top: 30%;
     left: 50%;
     transform: translate(-50%, -50%); 
 }
@@ -177,4 +177,10 @@ nav ul li {
     margin-bottom: 20px;
 }
 
+@media (max-width: 785px){
+    #welcome_h1{
+        font-size: 30px;
+        font-weight: 600;
+    }
+}
 
