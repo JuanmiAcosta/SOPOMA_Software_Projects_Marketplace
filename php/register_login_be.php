@@ -2,6 +2,7 @@
 
     error_reporting(E_ALL);
     ini_set('display_errors', '1');
+
     include 'connection_be.php'; // Para poder acceder a la base de datos y ejecutar querys
 
     $nombre = $_POST['name'];
@@ -10,6 +11,7 @@
     $telefono = $_POST['phone'];
     $usuario = $_POST['user'];
     $contrasena = $_POST['password'];
+
     $contrasena = hash('sha512', $contrasena); // Encriptamos la contraseña (sha512)
 
     //DIFERERNCIAMOS ENTRE LOGIN Y REGISTRO POR LOS INPUT VISIBLES ( CON LONGITUD 0 O NO)
@@ -41,7 +43,7 @@
         }else{
             echo '
                 <script>
-                    alert("Login failed. Check your username and password being user: '.$usuario.' and password: '.$contrasena.'");
+                    alert("Login failed. Check your username and password.");
                     window.location = "../index.php";              
                 </script>
             ';
