@@ -72,25 +72,22 @@
         </hgroup>
         <form action="php/register_login_be.php" method="POST" onsubmit="return validarFormulario()">
 
-          <input style="display:none;" id="name" type="text" name="name" placeholder="Name ..." aria-label="Name"
-            autocomplete="name" />
+          <input style="display:none;" id="name" type="text" name="name" placeholder="Name ..." aria-label="Name"/>
 
           <input style="display:none;" id="surname" type="text" name="surname" placeholder="Surname ..."
-            aria-label="Surname" autocomplete="surname" />
+            aria-label="Surname"/>
 
-          <input style="display:none;" id="email" type="text" name="email" placeholder="Email ..." aria-label="Email"
-            autocomplete="email" />
+          <input style="display:none;" id="email" type="text" name="email" placeholder="Email ..." aria-label="Email"/>
 
           <input style="display:none;" id="phone" type="text" name="phone" placeholder="Phone number ..."
-            aria-label="Phone number" autocomplete="tel" />
+            aria-label="Phone number"/>
 
-          <input type="text" id="user" name="user" placeholder="User ..." aria-label="Login" autocomplete="nickname" />
+          <input type="text" id="user" name="user" placeholder="User ..." aria-label="Login"/>
 
-          <input type="password" id="password" name="password" placeholder="Password ..." aria-label="Password"
-            autocomplete="current-password" />
+          <input type="password" id="password" name="password" placeholder="Password ..." aria-label="Password"/>
 
           <input style="display:none;" id="2password" type="password" name="2password" placeholder="Password again ..."
-            aria-label="Password" autocomplete="current-password" />
+            aria-label="Password"/>
 
           <h5 id="error" style="color:red; display:none;">Error</h5>
 

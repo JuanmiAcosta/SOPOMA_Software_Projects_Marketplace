@@ -24,7 +24,7 @@ if (!isset($_SESSION['usuario'])) {
     <meta name="description" content="The main content area." />
     <link rel="shortcut icon" href="../icon/logo.png" />
     <link rel="stylesheet" href="../css/style-home.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 
 <body style="font-family: 'system-ui', sans-serif;">
@@ -47,8 +47,9 @@ if (!isset($_SESSION['usuario'])) {
             <input type="checkbox" id="check" />
 
             <label for="check" class="checkbtn">
-                <i class="fas fa-bars"></i>
+                <i id="barras" class="fas fa-bars"></i>
             </label>
+
             <ul class="nav-links">
                 <li><a href="#">Home</a></li>
                 <li><a href="#">Projects</a></li>
@@ -86,6 +87,7 @@ if (!isset($_SESSION['usuario'])) {
     </div>
 
     <script src="../js/welcome.js"></script>
+    <script src="../js/bars-cross.js"></script>
 
 </body>
 
