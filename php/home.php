@@ -52,10 +52,11 @@ if (!isset($_SESSION['usuario'])) {
 
             <ul class="nav-links">
 
-                <li><?php
+                <li>
+                    <?php
                     echo '<a href="sendhome.php?usuario=' . urlencode($usuario) . '">
                         Home
-                    </a>'?>
+                    </a>' ?>
                 </li>
 
                 <li><a href="#">Projects</a>
@@ -95,7 +96,9 @@ if (!isset($_SESSION['usuario'])) {
 
         <div id="welcome">
             <h1>
-                <span id="welcome_h1" style="color:white;">🐧 Welcome, <?php echo "@$usuario" ?></span>
+                <span id="welcome_h1" style="color:white;">🐧 Welcome,
+                    <?php echo "@$usuario" ?>
+                </span>
             </h1>
         </div>
 
@@ -105,30 +108,46 @@ if (!isset($_SESSION['usuario'])) {
                 <figure>
                     <img src="../icon/banner1.jpeg" alt="banner proyectos">
                 </figure>
-                <div class="text">
-                    <h3>Projects</h3>
-                    <p>Create or find projects to collaborate with other users.</p>
-                </div>  
+                <div class="rest">
+                    <div class="text">
+                        <h3>Projects</h3>
+                        <p>Create or find brand new projects to collaborate with other users.</p>
+                    </div>
+                    <div style="background-color:#40775c" class="badge">
+                        <span>Projects: +20</span>
+                    </div>
+                </div>
+
             </div>
 
             <div class="card">
                 <figure>
                     <img src="../icon/banner2.jpeg" alt="banner proyectos">
                 </figure>
-                <div class="text">
-                    <h3>Profiles</h3>
-                    <p>Specify your profiles and find the best project team to work with.</p>
-                </div>  
+                <div class="rest">
+                    <div class="text">
+                        <h3>Profiles</h3>
+                        <p>Specify your profiles and find the best project team to work with.</p>
+                    </div>
+                    <div style="background-color:#80A2E8" class="badge">
+                        <span>Users: +50</span>
+                    </div>
+                </div>
             </div>
 
             <div class="card">
                 <figure>
                     <img src="../icon/banner3.jpeg" alt="banner proyectos">
                 </figure>
-                <div class="text">
-                    <h3>Rate them all</h3>
-                    <p>Rate the projects and profiles you are working with to help other users.</p>
-                </div>  
+                <div class="rest">
+                    <div class="text">
+                        <h3>Rate them all</h3>
+                        <p>Rate the projects and profiles you are working with to help other users.</p>
+                    </div>
+                    <div style="background-color:#8fa1af" class="badge">
+                        <span>Ratings: +200</span>
+                    </div>
+                </div>
             </div>
 
         </div>

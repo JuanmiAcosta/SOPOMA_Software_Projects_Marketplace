@@ -210,19 +210,24 @@ nav ul li {
     }
 }
 
+main{
+    padding-top:100px;
+}
+
 .cards {
     position: relative;
     top: 7%;
     display: flex;
     width: 90%;
-    height: 70vh;
+    height: 75vh;
     margin-bottom: 30px;
 }
 
 .card {
     border: 5px solid #11191f;
     width: 100%;
-    margin: 20px;
+    margin-left: 40px;
+    margin-right:40px;
     margin-bottom:40px;
     border-radius: 6px;
     overflow: hidden;
@@ -232,9 +237,31 @@ nav ul li {
     transition: all 400ms ease;
 }
 
+.rest{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.badge{
+    margin-top:20px;
+    margin-bottom:30px;
+    padding:10px;
+    border-radius: 10px 100px / 120px;
+    border: 4px outset #11191f;
+}
+
+.badge span{
+    padding:10px;
+    font-size: 25px;
+    font-weight: 600;
+}
+
 .card .text h3 {
     font-size: 30px;
-    font-weight: 600;
+    font-weight: 800;
     color: #11191f;
     margin-bottom: 10px;
 }
@@ -277,7 +304,7 @@ nav ul li {
     body::after {
         content: "";
         display: block;
-        height: 1000px;
+        height: 1300px;
     }
 
     .card img {
@@ -300,10 +327,17 @@ nav ul li {
         height: 200px;
     }
 
-    /* DAR MARGEN DEBAJO DE LAS CARTAS CON EL FLEX-WRAP */
-    body::after {
-        content: "";
-        display: block;
-        height: 950px;
+    .badge{
+        margin-top:20px;
+        margin-bottom:30px;
+        padding:10px;
+        border-radius: 10px 100px / 120px;
+        border: 4px outset #11191f;
+    }
+    
+    .badge span{
+        padding:5px;
+        font-size: 15px;
+        font-weight: 600;
     }
 }
