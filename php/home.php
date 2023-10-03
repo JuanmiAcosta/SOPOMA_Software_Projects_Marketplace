@@ -88,7 +88,7 @@ if (!isset($_SESSION['usuario'])) {
         </nav>
     </header>
 
-    <div class="container">
+    <main class="container">
 
         <div id="welcome">
             <h1>
@@ -96,7 +96,7 @@ if (!isset($_SESSION['usuario'])) {
             </h1>
         </div>
 
-    </div>
+    </main>
 
     <script src="../js/welcome.js"></script>
     <script src="../js/bars-cross.js"></script>
