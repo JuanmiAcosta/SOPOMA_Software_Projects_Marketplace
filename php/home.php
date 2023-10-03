@@ -64,6 +64,9 @@ if (!isset($_SESSION['usuario'])) {
                 <li><a href="#">Profiles</a>
                 </li>
 
+                <li><a href="#">Settings</a>
+                </li>
+
                 <li><a href="#" class="btn">
                         <button>@
                             <?php echo $usuario; ?>'s place
