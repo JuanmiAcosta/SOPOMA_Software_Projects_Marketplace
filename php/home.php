@@ -96,6 +96,40 @@ if (!isset($_SESSION['usuario'])) {
             </h1>
         </div>
 
+        <div class="cards">
+
+            <div class="card">
+                <figure>
+                    <img src="../icon/banner1.jpeg" alt="banner proyectos">
+                </figure>
+                <div class="text">
+                    <h3>Projects</h3>
+                    <p>Create or find projects to collaborate with other users.</p>
+                </div>  
+            </div>
+
+            <div class="card">
+                <figure>
+                    <img src="../icon/banner2.jpeg" alt="banner proyectos">
+                </figure>
+                <div class="text">
+                    <h3>Profiles</h3>
+                    <p>Specify your profiles and find the best project team to work with.</p>
+                </div>  
+            </div>
+
+            <div class="card">
+                <figure>
+                    <img src="../icon/banner3.jpeg" alt="banner proyectos">
+                </figure>
+                <div class="text">
+                    <h3>Rate them all</h3>
+                    <p>Rate the projects and profiles you are working with to help other users.</p>
+                </div>  
+            </div>
+
+        </div>
+
     </main>
 
     <script src="../js/welcome.js"></script>
