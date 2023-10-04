@@ -75,7 +75,7 @@ if (!isset($_SESSION['usuario'])) {
                     </a>
                 </li>
 
-                <li><a href="../php/close_session.php"><svg id="puerta" xmlns="http://www.w3.org/2000/svg" height="1em"
+                <li><a id="close" href="../php/close_session.php"><svg id="puerta" xmlns="http://www.w3.org/2000/svg" height="1em"
                             viewBox="0 0 576 512">
                             <style>
                                 svg {
