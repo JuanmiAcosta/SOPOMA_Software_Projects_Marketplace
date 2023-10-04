@@ -114,7 +114,7 @@ if (!isset($_SESSION['usuario'])) {
                         <p>Create or find brand new projects to collaborate with other users.</p>
                     </div>
                     <div style="background-color:#40775c" class="badge">
-                        <span>Projects: +20</span>
+                        <span>Projects: +100</span>
                     </div>
                 </div>
 
@@ -145,7 +145,7 @@ if (!isset($_SESSION['usuario'])) {
                         <p>Rate the projects and profiles you are working with to help other users.</p>
                     </div>
                     <div style="background-color:#8fa1af" class="badge">
-                        <span>Ratings: +200</span>
+                        <span>Ratings: +500</span>
                     </div>
                 </div>
             </div>

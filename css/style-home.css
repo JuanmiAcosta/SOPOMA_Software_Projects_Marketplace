@@ -216,10 +216,10 @@ main{
 
 .cards {
     position: relative;
-    top: 7%;
+    top: 3%;
     display: flex;
     width: 90%;
-    height: 75vh;
+    height: 70vh;
     margin-bottom: 30px;
 }
 
@@ -228,7 +228,7 @@ main{
     width: 100%;
     margin-left: 40px;
     margin-right:40px;
-    margin-bottom:40px;
+    margin-bottom:20px;
     border-radius: 6px;
     overflow: hidden;
     box-shadow: 0 1px 10px rgba(0, 0, 0, 0.2);
@@ -246,8 +246,8 @@ main{
 }
 
 .badge{
-    margin-top:20px;
-    margin-bottom:30px;
+    margin-top:10px;
+    margin-bottom:20px;
     padding:10px;
     border-radius: 10px 100px / 120px;
     border: 4px outset #11191f;
@@ -313,6 +313,40 @@ main{
 }
 
 @media (max-width: 500px) {
+
+    .card {
+        box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4);
+    }
+
+    .card:hover {
+        transform: scale(1.05);
+        box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.6);
+    }
+
+    .card img {
+        height: 200px;
+    }
+
+    .badge{
+        margin-top:20px;
+        margin-bottom:30px;
+        padding:10px;
+        border-radius: 10px 100px / 120px;
+        border: 4px outset #11191f;
+    }
+    
+    .badge span{
+        padding:5px;
+        font-size: 15px;
+        font-weight: 600;
+    }
+}
+
+@media (max-width: 500px) {
+
+    .cards {
+        width: 95%;
+    }
 
     .card {
         box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4);
