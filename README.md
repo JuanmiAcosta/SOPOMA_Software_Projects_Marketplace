@@ -89,12 +89,5 @@ git pull origin main --allow-unrelated-histories
 
 Esto es necesario si el repositorio remoto tiene un historial de commits diferente al repositorio local.
 
-Ejecute el siguiente comando para enviar los cambios al repositorio remoto:
-
-```
-git push -u origin main
-```
-
-Esto creará una nueva rama remota llamada main y enviará los cambios locales a esa rama.
 
 Una vez que haya completado estos pasos, tendrá una copia completa del repositorio de GitHub en su directorio local. Puede realizar cambios en el repositorio local y luego enviar esos cambios al repositorio remoto ejecutando los comandos git add, git commit y git push.
