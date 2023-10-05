@@ -7,7 +7,7 @@
 }
 
 body {
-    background-color: hsl(218deg 49% 30%);
+    background-color: hsl(297deg 80% 16%);
     height: auto;
 }
 
@@ -18,16 +18,15 @@ body {
     align-items: center;
     background-image: linear-gradient(180deg,
             hsl(206deg 29% 9%) 0%,
-            hsl(207deg 41% 11%) 10%,
-            hsl(209deg 49% 13%) 20%,
-            hsl(211deg 53% 15%) 30%,
-            hsl(214deg 53% 17%) 40%,
-            hsl(218deg 49% 20%) 50%,
-            hsl(218deg 49% 22%) 60%,
-            hsl(218deg 49% 24%) 70%,
-            hsl(218deg 49% 26%) 80%,
-            hsl(218deg 49% 28%) 90%,
-            hsl(218deg 49% 30%) 100%);
+            hsl(208deg 49% 10%) 11%,
+            hsl(210deg 63% 11%) 22%,
+            hsl(214deg 68% 12%) 33%,
+            hsl(220deg 62% 14%) 44%,
+            hsl(231deg 49% 17%) 56%,
+            hsl(248deg 45% 19%) 67%,
+            hsl(265deg 51% 19%) 78%,
+            hsl(282deg 60% 18%) 89%,
+            hsl(297deg 80% 16%) 100%);
     background-size: 100%;
     width: 100%;
     height: calc(100vh - 95px);
@@ -47,7 +46,7 @@ body {
     position: sticky;
     top: 0;
     z-index: 999;
-    
+
 }
 
 .header .logo img {
@@ -150,7 +149,7 @@ nav ul li {
     color: #fff;
     border-radius: 5px;
     font-size: 14px;
-  }
+}
 
 @media (max-width: 1010px) {
 

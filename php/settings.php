@@ -52,7 +52,7 @@ if (!isset($_SESSION['usuario'])) {
 
             <ul class="nav-links">
 
-            <li>
+                <li>
                     <?php
                     echo '<a href="sendhome.php?usuario=' . urlencode($usuario) . '">
                         Home
@@ -82,17 +82,10 @@ if (!isset($_SESSION['usuario'])) {
 
                 <li>
                     <?php
-                    echo '<a href="sendsettings.php?usuario=' . urlencode($usuario) . '" class="btn">
+                    echo '<a href="senduserplace.php?usuario=' . urlencode($usuario) . '" class="btn">
                         <button>@' . $usuario . '\'s place</button>
                         </a>';
                     ?>
-                </li>
-
-                <li><a href="#" class="btn">
-                        <button>@
-                            <?php echo $usuario; ?>'s place
-                        </button>
-                    </a>
                 </li>
 
                 <li><a id="close" href="../php/close_session.php"><svg id="puerta" xmlns="http://www.w3.org/2000/svg" height="1em"

@@ -23,7 +23,7 @@ if (!isset($_SESSION['usuario'])) {
     <title>SOPOMA App</title>
     <meta name="description" content="The main content area." />
     <link rel="shortcut icon" href="../icon/logo.png" />
-    <link rel="stylesheet" href="../css/style-home.css" />
+    <link rel="stylesheet" href="../css/style-user_place.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 
@@ -59,24 +59,38 @@ if (!isset($_SESSION['usuario'])) {
                     </a>' ?>
                 </li>
 
-                <li><a href="#">Projects</a>
+                <li>
+                    <?php
+                    echo '<a href="sendprojects.php?usuario=' . urlencode($usuario) . '">
+                        Projects
+                    </a>' ?>
                 </li>
 
-                <li><a href="#">Profiles</a>
+                <li>
+                    <?php
+                    echo '<a href="sendprofiles.php?usuario=' . urlencode($usuario) . '">
+                        Profiles
+                    </a>' ?>
                 </li>
 
-                <li><a href="#">Settings</a>
+                <li>
+                    <?php
+                    echo '<a href="sendsettings.php?usuario=' . urlencode($usuario) . '">
+                        Settings
+                    </a>' ?>
                 </li>
 
-                <li><a href="#" class="btn">
-                        <button>@
-                            <?php echo $usuario; ?>'s place
-                        </button>
-                    </a>
+                <li>
+                    <?php
+                    echo '<a href="senduserplace.php?usuario=' . urlencode($usuario) . '" class="btn">
+                        <button>@' . $usuario . '\'s place</button>
+                        </a>';
+                    ?>
                 </li>
 
-                <li><a id="close" href="../php/close_session.php"><svg id="puerta" xmlns="http://www.w3.org/2000/svg" height="1em"
-                            viewBox="0 0 576 512">
+
+                <li><a id="close" href="../php/close_session.php"><svg id="puerta" xmlns="http://www.w3.org/2000/svg"
+                            height="1em" viewBox="0 0 576 512">
                             <style>
                                 svg {
                                     fill: #ffffff

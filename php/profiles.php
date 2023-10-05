@@ -23,7 +23,7 @@ if (!isset($_SESSION['usuario'])) {
     <title>SOPOMA App</title>
     <meta name="description" content="The main content area." />
     <link rel="shortcut icon" href="../icon/logo.png" />
-    <link rel="stylesheet" href="../css/style-home.css" />
+    <link rel="stylesheet" href="../css/style-profiles.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 
