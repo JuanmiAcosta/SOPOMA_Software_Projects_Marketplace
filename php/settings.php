@@ -21,9 +21,9 @@ if (!isset($_SESSION['usuario'])) {
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>SOPOMA App</title>
-    <meta name="description" content="The main content area." />
+    <meta name="description" content="The settings and user area." />
     <link rel="shortcut icon" href="../icon/logo.png" />
-    <link rel="stylesheet" href="../css/style-home.css" />
+    <link rel="stylesheet" href="../css/style-settings.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 
@@ -52,7 +52,7 @@ if (!isset($_SESSION['usuario'])) {
 
             <ul class="nav-links">
 
-                <li>
+            <li>
                     <?php
                     echo '<a href="sendhome.php?usuario=' . urlencode($usuario) . '">
                         Home
@@ -88,8 +88,15 @@ if (!isset($_SESSION['usuario'])) {
                     ?>
                 </li>
 
-                <li><a id="close" href="../php/close_session.php"><svg id="puerta" xmlns="http://www.w3.org/2000/svg"
-                            height="1em" viewBox="0 0 576 512">
+                <li><a href="#" class="btn">
+                        <button>@
+                            <?php echo $usuario; ?>'s place
+                        </button>
+                    </a>
+                </li>
+
+                <li><a id="close" href="../php/close_session.php"><svg id="puerta" xmlns="http://www.w3.org/2000/svg" height="1em"
+                            viewBox="0 0 576 512">
                             <style>
                                 svg {
                                     fill: #ffffff
@@ -106,64 +113,6 @@ if (!isset($_SESSION['usuario'])) {
     </header>
 
     <main class="container">
-
-        <div id="welcome">
-            <h1>
-                <span id="welcome_h1" style="color:white;">🐧 Welcome,
-                    <?php echo "@$usuario" ?>
-                </span>
-            </h1>
-        </div>
-
-        <div class="cards">
-
-            <div class="card">
-                <figure>
-                    <img src="../icon/banner1.jpeg" alt="banner proyectos">
-                </figure>
-                <div class="rest">
-                    <div class="text">
-                        <h3>Projects</h3>
-                        <p>Create or find brand new projects to collaborate with other users.</p>
-                    </div>
-                    <div style="background-color:#40775c" class="badge">
-                        <span>Projects: +100</span>
-                    </div>
-                </div>
-
-            </div>
-
-            <div class="card">
-                <figure>
-                    <img src="../icon/banner2.jpeg" alt="banner proyectos">
-                </figure>
-                <div class="rest">
-                    <div class="text">
-                        <h3>Profiles</h3>
-                        <p>Specify your profiles and find the best project team to work with.</p>
-                    </div>
-                    <div style="background-color:#80A2E8" class="badge">
-                        <span>Users: +50</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card">
-                <figure>
-                    <img src="../icon/banner3.jpeg" alt="banner proyectos">
-                </figure>
-                <div class="rest">
-                    <div class="text">
-                        <h3>Rate them all</h3>
-                        <p>Rate the projects and profiles you are working with to help other users.</p>
-                    </div>
-                    <div style="background-color:#8fa1af" class="badge">
-                        <span>Ratings: +500</span>
-                    </div>
-                </div>
-            </div>
-
-        </div>
 
     </main>
 
