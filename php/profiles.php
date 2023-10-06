@@ -76,8 +76,8 @@ if (!isset($_SESSION['usuario'])) {
 
                 <li>
                     <?php
-                    echo '<a href="sendpg.php?usuario=' . urlencode($usuario) . '&pg=settings">
-                        Settings
+                    echo '<a href="sendpg.php?usuario=' . urlencode($usuario) . '&pg=ratings">
+                    Ratings
                     </a>' ?>
                 </li>
 
@@ -110,7 +110,6 @@ if (!isset($_SESSION['usuario'])) {
 
     </main>
 
-    <script src="../js/welcome.js"></script>
     <script src="../js/bars-cross.js"></script>
 
 </body>

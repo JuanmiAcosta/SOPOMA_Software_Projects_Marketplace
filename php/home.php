@@ -76,8 +76,8 @@ if (!isset($_SESSION['usuario'])) {
 
                 <li>
                     <?php
-                    echo '<a href="sendpg.php?usuario=' . urlencode($usuario) . '&pg=settings">
-                        Settings
+                    echo '<a href="sendpg.php?usuario=' . urlencode($usuario) . '&pg=ratings">
+                        Ratings
                     </a>' ?>
                 </li>
 
@@ -144,7 +144,7 @@ if (!isset($_SESSION['usuario'])) {
                         <p>Specify your profiles and find the best project team to work with.</p>
                     </div>
                     <div style="background-color:#80A2E8" class="badge">
-                        <span>Users: +50</span>
+                        <span>Profiles: +50</span>
                     </div>
                 </div>
             </div>

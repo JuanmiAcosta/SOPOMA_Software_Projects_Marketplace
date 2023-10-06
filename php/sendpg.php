@@ -22,10 +22,10 @@ if (isset($_GET['usuario'])) {
             window.location = '../php/projects.php?usuario=$usuario';              
         </script>
     ";
-    } else if ($pg == 'settings'){
+    } else if ($pg == 'ratings'){
         echo "
         <script>
-            window.location = '../php/settings.php?usuario=$usuario';              
+            window.location = '../php/ratings.php?usuario=$usuario';              
         </script>
     ";
     } else if ($pg == 'user_place'){

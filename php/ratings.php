@@ -23,7 +23,7 @@ if (!isset($_SESSION['usuario'])) {
     <title>SOPOMA App</title>
     <meta name="description" content="The settings and user area." />
     <link rel="shortcut icon" href="../icon/logo.png" />
-    <link rel="stylesheet" href="../css/style-settings.css" />
+    <link rel="stylesheet" href="../css/style-ratings.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 
@@ -76,8 +76,8 @@ if (!isset($_SESSION['usuario'])) {
 
                 <li>
                     <?php
-                    echo '<a href="sendpg.php?usuario=' . urlencode($usuario) . '&pg=settings">
-                        Settings
+                    echo '<a href="sendpg.php?usuario=' . urlencode($usuario) . '&pg=ratings">
+                        Ratings
                     </a>' ?>
                 </li>
 
@@ -110,7 +110,6 @@ if (!isset($_SESSION['usuario'])) {
 
     </main>
 
-    <script src="../js/welcome.js"></script>
     <script src="../js/bars-cross.js"></script>
 
 </body>
