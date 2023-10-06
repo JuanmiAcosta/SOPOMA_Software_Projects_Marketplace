@@ -35,7 +35,7 @@ if (!isset($_SESSION['usuario'])) {
             <!-- la que hay que liar para pasar la variable usuario de un lao pa otro -->
             <?php
 
-            echo '<a href="sendhome.php?usuario=' . urlencode($usuario) . '">
+            echo '<a href="sendpg.php?usuario=' . urlencode($usuario) . '&pg=home">
             
                         <img src="../icon/logo.png" alt="logo" />
 
@@ -54,35 +54,36 @@ if (!isset($_SESSION['usuario'])) {
 
                 <li>
                     <?php
-                    echo '<a href="sendhome.php?usuario=' . urlencode($usuario) . '">
+                    echo '<a href="sendpg.php?usuario=' . urlencode($usuario) . '&pg=home">
                         Home
-                    </a>' ?>
+                    </a>';
+                    ?>
                 </li>
 
                 <li>
                     <?php
-                    echo '<a href="sendprojects.php?usuario=' . urlencode($usuario) . '">
+                    echo '<a href="sendpg.php?usuario=' . urlencode($usuario) . '&pg=projects">
                         Projects
                     </a>' ?>
                 </li>
 
                 <li>
                     <?php
-                    echo '<a href="sendprofiles.php?usuario=' . urlencode($usuario) . '">
+                    echo '<a href="sendpg.php?usuario=' . urlencode($usuario) . '&pg=profiles">
                         Profiles
                     </a>' ?>
                 </li>
 
                 <li>
                     <?php
-                    echo '<a href="sendsettings.php?usuario=' . urlencode($usuario) . '">
+                    echo '<a href="sendpg.php?usuario=' . urlencode($usuario) . '&pg=settings">
                         Settings
                     </a>' ?>
                 </li>
 
                 <li>
                     <?php
-                    echo '<a href="sendsettings.php?usuario=' . urlencode($usuario) . '" class="btn">
+                    echo '<a href="sendpg.php?usuario=' . urlencode($usuario) . '&pg=user_place" class="btn">
                         <button>@' . $usuario . '\'s place</button>
                         </a>';
                     ?>

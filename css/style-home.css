@@ -231,6 +231,8 @@ main{
     position: relative;
     top: 3%;
     display: flex;
+    align-items: center;
+    justify-content: center;
     width: 90%;
     height: 70vh;
     margin-bottom: 30px;
@@ -301,6 +303,25 @@ main{
 .card:hover {
     transform: scale(1.05);
     box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4);
+}
+
+@media (min-width: 1700px) {
+
+    .cards {
+        top: 5%;
+        flex-wrap: wrap;
+        align-content: flex-start;
+        /* Controla la alineación vertical */
+        width: 90%;
+    }
+
+    .card img {
+        height: 300px;
+    }
+
+    .card{
+        max-width: 400px;
+    }
 }
 
 @media (max-width: 1000px) {
