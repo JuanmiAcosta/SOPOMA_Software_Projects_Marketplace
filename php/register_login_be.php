@@ -82,7 +82,7 @@
             ';
         }else{
 
-            $query = "INSERT INTO users (email, user, name, surname, password, phone) VALUES ('$email', '$usuario', '$nombre', '$apellido', '$contrasena', '$telefono')";
+            $query = "INSERT INTO users (user, email, name, surname, password, phone) VALUES ('$usuario', '$email', '$nombre', '$apellido', '$contrasena', '$telefono')";
 
             $ejecutar = mysqli_query($conexion, $query);
 

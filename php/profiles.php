@@ -108,6 +108,17 @@ if (!isset($_SESSION['usuario'])) {
 
     <main class="container">
 
+        <div id="buscador">
+            <form action="searchuser.php" method="GET">
+                <input type="text" name="name" placeholder="Type name..." autocomplete="off" />
+                <button type="submit" name="submit-search"><i class="fas fa-search"></i></button>
+            </form>
+        </div>
+
+        <div id="Search_users">
+            <h2 style="color:white;">Look for profiles...</h2>
+        </div>
+
     </main>
 
     <script src="../js/bars-cross.js"></script>
