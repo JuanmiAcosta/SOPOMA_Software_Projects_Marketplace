@@ -103,7 +103,7 @@ for ($i = 0; $i < $num_rows; $i++) {
 }
 
 // Codificar el array en formato JSON
-
+header('Content-Type: application/json');
 $json_string = json_encode($info_global);
 
 // Devolver el JSON

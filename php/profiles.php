@@ -109,19 +109,21 @@ if (!isset($_SESSION['usuario'])) {
     <main class="container">
 
         <div id="buscador">
-            <form action="searchuser.php" method="GET">
+            <form id="my-form" onsubmit="return display_users">
                 <input type="text" name="name" placeholder="Type name..." autocomplete="off" />
                 <button type="submit" name="submit-search"><i class="fas fa-search"></i></button>
             </form>
         </div>
 
-        <div id="Search_users">
+        <div id="Users">
+            <!-- HACER DIV CON CARTA DE USUARIO Y SUS PERFILES -->
             <h2 style="color:white;">Look for profiles...</h2>
         </div>
 
     </main>
 
     <script src="../js/bars-cross.js"></script>
+    <script src="../js/display_users.js"></script>
 
 </body>
 

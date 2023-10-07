@@ -228,7 +228,7 @@ button[type="submit"] {
     padding: 10px;
 }
 
-#Search_users {
+#Users {
     display: flex;
     justify-content: center;
     align-items: center;
