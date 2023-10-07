@@ -18,18 +18,64 @@ Desarrollo en grupo de un Sistema de Información. Pretende ser en primera insta
 <li>Activa Apache(Servidor) y MySQL(SGBD)</li>
 <li>Dale a admin en MySQL</li>
 <li>Crea una base de datos llamada exactamente "sopoma_bd" con formato "utf8mb4_spanish_ci".</li>
-<li>Crea la primera tabla (apartado SQL) para comprobar que todo funcione y empezar a probar el register y login:</li>
+<li>Crea las primeras tablas (apartado SQL) para comprobar que todo funcione y empezar a probar el register, login, logout y la recogida de datos de los perfiles:</li>
 </ul>
 
 ```
 CREATE TABLE Users (
-    email VARCHAR(50) PRIMARY KEY,
-    user VARCHAR(50) NOT NULL UNIQUE,
+    user VARCHAR(50) PRIMARY KEY,
+    email VARCHAR(50) UNIQUE,
     name VARCHAR(50) NOT NULL,
     surname VARCHAR(50) NOT NULL,
     password VARCHAR(150) NOT NULL,
     phone VARCHAR(9) NOT NULL
 );
+
+CREATE TABLE Qualifications (
+    qualification VARCHAR(50) PRIMARY KEY
+);
+
+CREATE TABLE Profiles (
+    user VARCHAR(50),
+    type VARCHAR(50) NOT NULL,
+    level VARCHAR(50) CHECK ( level in ('Beginer','Intermediate','Advanced')), 
+    knowledge LONGTEXT,
+    technologies LONGTEXT,
+    PRIMARY KEY (user, type),
+    FOREIGN KEY (type) REFERENCES Qualifications(qualification),
+    FOREIGN KEY (user) REFERENCES Users(user)
+);
+
+INSERT INTO Qualifications (qualification) VALUES
+('Backend Developer'),
+('Frontend Developer'),
+('User Experience Designer'),
+('Software Architect'),
+('Full Stack Developer'),
+('DevOps Engineer'),
+('Data Scientist'),
+('Machine Learning Engineer'),
+('Automation Engineer'),
+('Virtual Reality Engineer'),
+('Augmented Reality Developer'),
+('Embedded Systems Developer'),
+('IoT Engineer'),
+('Embedded Software Engineer'),
+('Firmware Developer'),
+('Systems Engineer'),
+('Web Application Developer'),
+('Database Engineer'),
+('Database Administrator'),
+('Game Developer'),
+('Network Engineer'),
+('Network Security Specialist'),
+('Test Automation Engineer'),
+('Software Quality Analyst'),
+('Mobile Application Developer'),
+('Cloud Infrastructure Engineer'),
+('Linux System Administrator'),
+('Document Management Specialist')
+;
 ```
 
 Ahora debes saber que la ruta para alojar el directorio del proyecto es : "C:\xampp\htdocs". CREA UN DIRECTORIO VACÍO CON EL NOMBRE DE "SOPOMA", MÁS ADELANTE CLONARÁS EN ESE DIRECTORIO EL REPOSITORIO DE GITHUB.
