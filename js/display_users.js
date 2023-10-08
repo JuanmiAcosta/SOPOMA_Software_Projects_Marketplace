@@ -48,6 +48,12 @@ function display_users(event) {
 
                 var cards = document.getElementsByClassName('card');
 
+                //1º Eliminar todas las tarjetas de usuario del DOM
+
+                while (cards.length > 0) {
+                    cards[0].parentNode.removeChild(cards[0]);
+                }
+
                 // Crear una tarjeta de usuario para cada usuario en el archivo JSON
                 for (var i = 0; i < data.length; i++) {
                     var user = data[i];
