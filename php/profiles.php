@@ -109,18 +109,137 @@ if (!isset($_SESSION['usuario'])) {
     <main class="container">
 
         <div id="buscador">
-            <form id="my-form" onsubmit="return display_users">
-                <input type="text" name="name" placeholder="Type name..." autocomplete="off" />
-                <button type="submit" name="submit-search"><i class="fas fa-search"></i></button>
+            <form id="my-form">
+                <input id="input_name" type="text" placeholder="Type name..." autocomplete="off" />
+                <button id="submit_button" onclick="display_users(event)"><i class="fas fa-search"></i></button>
             </form>
         </div>
 
-        <div id="Users" style=" display:none;">
-            <!-- HACER DIV CON CARTA DE USUARIO Y SUS PERFILES -->
-            <h2 id="Users_h2" style="color:white;">There is no users with that name or surname, try another one. 🫡</h2>
+        <div id="no_users" style="display:none;">
+            <h2 id="nouser_h2" style="color:white;">There is no users with that name or surname, try another one. 🫡</h2>
         </div>
 
+        <div id="Users" >
+            
+            <div class="cards">
+
+                <div class="card">
+
+                    <div class="user_name_surname" style="background-color: #394974;">
+                        <h3 class="username">@pedritoxd</h3>
+                        <h3 class="name_surname">Pedro Juan Acosta Luque</h3>
+                    </div>
+
+                    <br> 
+
+                    <div class="contact">
+                        <h4 class="email"><i class="fa-regular fa-envelope"></i> pedrojuan@gmail.com </h4>
+                        <h4 class="phone"><i class="fa-solid fa-mobile" ></i> 643562771 </h4>
+                    </div>
+
+                    <br>
+
+                    <div class="profiles">
+                        <ul>
+
+                            <li class="profile">
+                                <h4 class="type">Backend Developer / Intermediate</h4>
+                                <p class="knowledge"> I like elephants </p>
+                                <p class="technologies"> Joe Mama </p>
+                            </li>
+
+                            <li class="profile">
+                                <h4 class="type">Frontend Developer  / Beginer</h4>
+                                <p class="knowledge"> I like elephants too in here </p>
+                                <p class="technologies"> Lorem Ipsum </p>
+                            </li>
+
+                        </ul>
+
+                    </div>
+                </div>
+
+                <div class="card">
+
+                    <div class="user_name_surname" style="background-color: green;">
+                        <h3 class="username">@pedritoxd</h3>
+                        <h3 class="name_surname">Pedro Juan Acosta Luque</h3>
+                    </div>
+
+                    <br> 
+
+                    <div class="contact">
+                        <h4 class="email"><i class="fa-regular fa-envelope"></i> pedrojuan@gmail.com </h4>
+                        <h4 class="phone"><i class="fa-solid fa-mobile" ></i> 643562771 </h4>
+                    </div>
+
+                    <br>
+
+                    <div class="profiles">
+                        <ul>
+
+                            <li class="profile">
+                                <h4 class="type">Backend Developer / Intermediate</h4>
+                                <p class="knowledge"> I like elephants </p>
+                                <p class="technologies"> Joe Mama </p>
+                            </li>
+
+                            <li class="profile">
+                                <h4 class="type">Frontend Developer  / Beginer</h4>
+                                <p class="knowledge"> I like elephants too in here </p>
+                                <p class="technologies"> Lorem Ipsum </p>
+                            </li>
+
+                        </ul>
+
+                    </div>
+                </div>
+
+                <div class="card">
+
+                    <div class="user_name_surname" style="background-color: red;">
+                        <h3 class="username">@pedritoxd</h3>
+                        <h3 class="name_surname">Pedro Juan Acosta Luque</h3>
+                    </div>
+
+                    <br> 
+
+                    <div class="contact">
+                        <h4 class="email"><i class="fa-regular fa-envelope"></i> pedrojuan@gmail.com </h4>
+                        <h4 class="phone"><i class="fa-solid fa-mobile" ></i> 643562771 </h4>
+                    </div>
+
+                    <br>
+
+                    <div class="profiles">
+                        <ul>
+
+                            <li class="profile">
+                                <h4 class="type">Backend Developer / Intermediate</h4>
+                                <p class="knowledge"> I like elephants </p>
+                                <p class="technologies"> Joe Mama </p>
+                            </li>
+
+                            <li class="profile">
+                                <h4 class="type">Frontend Developer  / Beginer</h4>
+                                <p class="knowledge"> I like elephants too in here </p>
+                                <p class="technologies"> Lorem Ipsum </p>
+                            </li>
+
+                        </ul>
+
+                    </div>
+                </div>
+
+                <div id="espacio_al_final"></div>
+
+            </div>
+
+        </div>
+       
     </main>
+
+    
 
     <script src="../js/bars-cross.js"></script>
     <script src="../js/display_users.js"></script>

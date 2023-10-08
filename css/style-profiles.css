@@ -201,7 +201,7 @@ form {
     justify-content: center;
     align-items: center;
     position: absolute;
-    top : 20%;
+    top : 25%;
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: #fff;
@@ -217,7 +217,7 @@ input {
     width: 100%;
 }
 
-button[type="submit"] {
+button {
     background-color: #11191f;
     border: none;
     border-radius: 5px;
@@ -228,7 +228,7 @@ button[type="submit"] {
     padding: 10px;
 }
 
-#Users {
+#Users, #no_users {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -237,3 +237,96 @@ button[type="submit"] {
     width: 100%;
     margin-top: 20px;
 }
+
+#no_users{
+    position:relative;
+    top:18%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height:auto;
+    width: 100%;
+    margin:20px
+}
+
+#no_users h2{
+    font-size: 30px;
+    font-weight: 700;
+}
+
+/*------------------- CARDS -------------------*/
+
+#espacio_al_final{
+    opacity: 0;
+    height: 50px;
+    width: 100%;
+}
+
+.cards {
+    position:relative;
+    top:18%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 90%;
+    height: 70vh;
+    margin-bottom: 30px;
+  }
+  
+  .card {
+    background-color: #11191f;
+    width: 40%;
+    margin: 20px;
+    padding: 20px;
+    border: 3px solid #000000;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .user_name_surname {
+    padding:10px;
+    color:white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .username {
+    margin: 0;
+  }
+  
+  .name_surname {
+    margin: 0;
+    font-size: 1.2em;
+  }
+  
+  .contact {
+    color:white;
+    margin-top: 20px;
+  }
+  
+  .email, .phone {
+    margin: 0;
+  }
+  
+  .profiles {
+    color:white;
+    margin-top: 20px;
+  }
+  
+  .profile {
+    margin-bottom: 20px;
+  }
+  
+  .type {
+    margin: 0;
+    font-size: 1.2em;
+  }
+  
+  .knowledge, .technologies {
+    margin: 0;
+  }
+
+/*------------------- CARDS END -------------------*/

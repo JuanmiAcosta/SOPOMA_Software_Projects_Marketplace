@@ -189,6 +189,13 @@ nav ul li {
 /* ------------------ NAVBAR END ------------------ */
 
 /* ------------------ MAIN ------------------ */
+
+#espacio_al_final{
+    opacity: 0;
+    height: 50px;
+    width: 100%;
+}
+
 #welcome {
     text-align: center;
     line-height: 50px;
@@ -332,13 +339,6 @@ main{
         align-content: flex-start;
         /* Controla la alineación vertical */
         width: 70%;
-    }
-
-    /* DAR MARGEN DEBAJO DE LAS CARTAS CON EL FLEX-WRAP */
-    body::after {
-        content: "";
-        display: block;
-        height: 1300px;
     }
 
     .card img {

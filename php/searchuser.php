@@ -3,7 +3,7 @@ include 'connection_be.php';
 
 $name = $_GET['name'];
 
-$sql = "SELECT user FROM users WHERE name LIKE '%$name%' OR surname LIKE '%$name%'";
+$sql = "SELECT user FROM users WHERE name LIKE '%$name%' OR surname LIKE '%$name%' LIMIT 9";
 $result = mysqli_query($conexion, $sql);
 
 $users = array();
@@ -45,7 +45,7 @@ for ($i = 0; $i < $num_rows; $i++) {
 
     for ($j = 0; $j < $num_profiles; $j++) {
         $profile = $profiles[$j];
-        $sql4 = "SELECT * FROM profiles WHERE user = '$user' AND type = '$profile'";
+        $sql4 = "SELECT * FROM profiles WHERE user = '$user' AND type = '$profile' LIMIT 3";
         $result = mysqli_query($conexion, $sql4);
         $info_profile = array();
 
