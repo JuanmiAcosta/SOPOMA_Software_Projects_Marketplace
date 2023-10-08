@@ -115,9 +115,9 @@ if (!isset($_SESSION['usuario'])) {
             </form>
         </div>
 
-        <div id="Users">
+        <div id="Users" style=" display:none;">
             <!-- HACER DIV CON CARTA DE USUARIO Y SUS PERFILES -->
-            <h2 style="color:white;">Look for profiles...</h2>
+            <h2 id="Users_h2" style="color:white;">There is no users with that name or surname, try another one. 🫡</h2>
         </div>
 
     </main>

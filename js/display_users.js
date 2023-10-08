@@ -7,6 +7,13 @@ function display_users() {
         .then(response => response.json())
         .then(data => {
             console.log(data);
+
+            // FRONTEND TIME
+            if (data.length == 0) {
+                document.getElementById('Users').style.display = 'block';
+            } else {
+                
+            }
         })
         .catch(error => console.error(error));
 }
