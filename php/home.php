@@ -164,8 +164,6 @@ if (!isset($_SESSION['usuario'])) {
                 </div>
             </div>
 
-            <div id="espacio_al_final"></div>
-
         </div>
 
     </main>
