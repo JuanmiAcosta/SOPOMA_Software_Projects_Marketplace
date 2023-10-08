@@ -228,7 +228,7 @@ button {
     padding: 10px;
 }
 
-#Users, #no_users {
+#Users {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -240,14 +240,14 @@ button {
 
 #no_users{
     position:relative;
-    top:18%;
+    top:25%;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
     height:auto;
-    width: 100%;
-    margin:20px
+    width: 90%;
+    margin:20px;  
 }
 
 #no_users h2{
@@ -257,10 +257,23 @@ button {
 
 /*------------------- CARDS -------------------*/
 
-#espacio_al_final{
+.espacio_al_final{
     opacity: 0;
     height: 50px;
     width: 100%;
+}
+
+.username, .name_surname{
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+.separador {
+    display: block;
+    width: 100%;
+    height: 2px; /* Puedes ajustar el grosor del separador según tus preferencias */
+    background-color: #ffffff;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4); /* Añade una sombra suave */
+    margin: 10px 0; /* Espacio alrededor del separador */
 }
 
 .cards {
@@ -269,7 +282,7 @@ button {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    width: 90%;
+    width: 100%;
     height: 70vh;
     margin-bottom: 30px;
   }
@@ -277,7 +290,7 @@ button {
   .card {
     background-color: #11191f;
     width: 40%;
-    margin: 20px;
+    margin: 20px 10px;
     padding: 20px;
     border: 3px solid #000000;
     border-radius: 5px;
@@ -327,6 +340,24 @@ button {
   
   .knowledge, .technologies {
     margin: 0;
+  }
+
+  @media (max-width: 830px) {
+    .card {
+        width: 100%;
+    }
+
+    #no_users{
+        position:relative;
+        top:40%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        height:auto;
+        width: 80%;
+        margin:20px;  
+    }
   }
 
 /*------------------- CARDS END -------------------*/

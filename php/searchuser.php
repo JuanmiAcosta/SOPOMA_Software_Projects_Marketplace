@@ -3,7 +3,7 @@ include 'connection_be.php';
 
 $name = $_GET['name'];
 
-$sql = "SELECT user FROM users WHERE name LIKE '%$name%' OR surname LIKE '%$name%' LIMIT 9";
+$sql = "SELECT user FROM users WHERE name LIKE '%$name%' OR surname LIKE '%$name%' LIMIT 10";
 $result = mysqli_query($conexion, $sql);
 
 $users = array();
