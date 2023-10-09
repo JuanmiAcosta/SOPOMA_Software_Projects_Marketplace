@@ -330,7 +330,7 @@ input {
   }
   
   .knowledge, .technologies {
-    margin: 0;
+    margin: 5px;
   }
 
   @media (max-width: 830px) {
