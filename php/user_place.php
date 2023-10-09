@@ -107,10 +107,10 @@ if (!isset($_SESSION['usuario'])) {
     </header>
 
     <main class="container">
+        
+        <h1>My profiles:</h1>
 
         <div id="CRUD_profiles">
-
-            <h1>My profiles:</h1>
 
             <div id="create_profile">
 
@@ -226,6 +226,8 @@ if (!isset($_SESSION['usuario'])) {
             </div>
 
         </div>
+
+        <div class="espacio_al_final"></div>
 
     </main>
 
