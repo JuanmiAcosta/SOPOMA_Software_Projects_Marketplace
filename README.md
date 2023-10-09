@@ -78,11 +78,13 @@ INSERT INTO Qualifications (qualification) VALUES
 ;
 ```
 
-Ahora debes saber que la ruta para alojar el directorio del proyecto es : "C:\xampp\htdocs". CREA UN DIRECTORIO VACÍO CON EL NOMBRE DE "SOPOMA", MÁS ADELANTE CLONARÁS EN ESE DIRECTORIO EL REPOSITORIO DE GITHUB.
+Ahora debes saber que la ruta para alojar el directorio del proyecto es : "C:\xampp\htdocs". Crea un directorio vacío con el nombre de "SOPOMA", más adelante clonarás el repositorio en él.
 
 Esto se debe a que al levantar el servidor sólo se ven los servicios de ese directorio.
 
 Ahora siempre que actives Apache y MySQL, y tengas el directorio con el proyecto en la ruta correcta podrás buscar "localhost/<NOMBRE_DE_TU_DIRECTORIO>" para ver tu proyecto.
+
+Puedes insertar tuplas directamente desde "phpMyAdmin", sin embargo recuerda que si insertas en el campo "password" 123, al insertarlo desde la aplicación la contraseña se encripta y desencripta. Mejor insertar las cosas desde la misma aplicación.
 
 > [!WARNING]
 > <h2 style="color:red; font-weight:bold;">IMPORTANTE CTRL+F5 EN LA PÁGINA PARA ACTUALIZAR TODO EL CÓDIGO DE LA PÁGINA</h2>
