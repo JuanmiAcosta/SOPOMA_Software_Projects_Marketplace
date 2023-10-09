@@ -114,10 +114,10 @@ if (!isset($_SESSION['usuario'])) {
 
             <div id="create_profile">
 
-                <h2>Create/Modificate profile</h2>
+                <h2>Create profile</h2>
 
-                <label for="qualification">Qualification:</label>
-                <select id="qualification" name="qualification">
+                <label for="create_qualification">Qualification:</label>
+                <select class="qualification" id="create_qualification" name="create_qualification">
                     <?php
                     include "connection_be.php";
 
@@ -135,22 +135,96 @@ if (!isset($_SESSION['usuario'])) {
                     ?>
                 </select>
 
-                <label for="level">Level:</label>
-                <select id="level" name="level">
+                <label for="create_level">Level:</label>
+                <select class="level" id="create_level" name="create_level">
                     <option value="Beginner">Beginner</option>
                     <option value="Intermediate">Intermediate</option>
                     <option value="Advanced">Advanced</option>
                 </select>
 
-                <label for="knowledge">Knowledge:</label>
-                <input type="text" id="knowledge" name="knowledge">
+                <label for="create_knowledge">Knowledge:</label>
+                <input type="text" class="knowledge" id="create_knowledge" name="create_knowledge">
 
-                <label for="technologies">Technologies:</label>
-                <input type="text" id="technologies" name="technologies">
+                <label for="create_technologies">Technologies:</label>
+                <input type="text" class="technologies" id="create_technologies" name="create_technologies">
 
-                <button id="create_profile_btn"><i class="fa fa-paper-plane"></i></i></button>
+                <button id="create_profile_btn"><i class="fa-regular fa-square-plus"></i></button>
 
             </div>
+
+            <div id="modificate_profile">
+
+                <h2>Modificate profile</h2>
+
+                <label for="modificate_qualification">Qualification:</label>
+                <select class="qualification" id="modificate_qualification" name="modificate_qualification">
+                    <?php
+                    include "connection_be.php";
+
+                    // Consulta SQL para obtener las opciones de la tabla "qualifications"
+                    $sql = "SELECT Qualifications.qualification
+                    FROM Qualifications
+                    INNER JOIN profiles ON Qualifications.qualification = profiles.type
+                    WHERE profiles.user = '$usuario'";
+                    $result = mysqli_query($conexion, $sql);
+
+                    // Imprimir las opciones en la lista desplegable
+                    while ($row = $result->fetch_assoc()) {
+                        echo "<option value='" . $row["qualification"] . "'>" . $row["qualification"] . "</option>";
+
+                    }
+
+                    mysqli_close($conexion);
+                    ?>
+                </select>
+
+                <label for="modificate_level">Level:</label>
+                <select class="level" id="modificate_level" name="modificate_level">
+                    <option value="Beginner">Beginner</option>
+                    <option value="Intermediate">Intermediate</option>
+                    <option value="Advanced">Advanced</option>
+                </select>
+
+                <label for="modificate_knowledge">Knowledge:</label>
+                <input type="text" class="knowledge" id="modificate_knowledge" name="modificate_knowledge">
+
+                <label for="modificate_technologies">Technologies:</label>
+                <input type="text" class="technologies" id="modificate_technologies" name="modificate_technologies">
+
+                <button id="modificate_profile_btn"><i class="fa-solid fa-arrows-spin"></i></button>
+
+            </div>
+
+            <div id="delete_profile">
+
+                <h2>Delete profile</h2>
+
+                <label for="delete_qualification">Qualification:</label>
+                <select class="qualification" id="delete_qualification" name="delete_qualification">
+                    <?php
+                    include "connection_be.php";
+
+                    // Consulta SQL para obtener las opciones de la tabla "qualifications"
+                    $sql = "SELECT Qualifications.qualification FROM Qualifications 
+                    INNER JOIN profiles ON Qualifications.qualification = profiles.type 
+                    WHERE profiles.user = '$usuario'";
+
+                    $result = mysqli_query($conexion, $sql);
+
+                    // Imprimir las opciones en la lista desplegable
+                    while ($row = $result->fetch_assoc()) {
+                        echo "<option value='" . $row["qualification"] . "'>" . $row["qualification"] . "</option>";
+
+                    }
+
+                    mysqli_close($conexion);
+                    ?>
+                </select>
+
+                <button id="delete_profile_btn"><i class="fa-solid fa-trash"></i></button>
+
+            </div>
+
         </div>
 
     </main>
