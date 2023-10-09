@@ -95,13 +95,6 @@
   </main>
   <!-- ./ Main -->
 
-  <!-- Footer -->
-  <footer class="container-fluid">
-    <small>
-      Made by "Los Pollos Hermanos" </small>
-  </footer>
-  <!-- ./ Footer -->
-
   <script src="js/sign-in-sign-up.js"></script>
 </body>
 

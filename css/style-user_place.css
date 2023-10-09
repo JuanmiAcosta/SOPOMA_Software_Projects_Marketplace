@@ -196,6 +196,8 @@ nav ul li {
     margin: 10px 0; /* Espacio alrededor del separador */
 }
 
+/* ------------------ PROFILES CSS ------------------ */
+
 .container{
     display:flex;
     flex-direction:column;
@@ -306,3 +308,5 @@ nav ul li {
       width: 90%;
     }
   }
+
+  /* ------------------ PROFILES CSS END ------------------ */
