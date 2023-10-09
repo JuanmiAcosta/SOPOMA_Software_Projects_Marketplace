@@ -11,6 +11,16 @@ if (!isset($_SESSION['usuario'])) {
     die();
 } else {
     $usuario = $_SESSION['usuario'];
+
+    include "connection_be.php";
+
+    $query = mysqli_query($conexion, "SELECT COUNT(*) FROM profiles");
+
+    $profiles = mysqli_fetch_array($query)[0];
+
+    //SE HARÁ TAMBIÉN CON LOS PROYECTOS Y LAS VALORACIONES
+
+    mysqli_close($conexion);
 }
 ?>
 
@@ -144,7 +154,7 @@ if (!isset($_SESSION['usuario'])) {
                         <p>Specify your profiles and find the best project team to work with.</p>
                     </div>
                     <div style="background-color:#80A2E8" class="badge">
-                        <span>Profiles: +50</span>
+                        <span>Profiles: <?php echo $profiles; ?></span>
                     </div>
                 </div>
             </div>

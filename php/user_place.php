@@ -108,8 +108,53 @@ if (!isset($_SESSION['usuario'])) {
 
     <main class="container">
 
+        <div id="CRUD_profiles">
+
+            <h1>My profiles:</h1>
+
+            <div id="create_profile">
+
+                <h2>Create/Modificate profile</h2>
+
+                <label for="qualification">Qualification:</label>
+                <select id="qualification" name="qualification">
+                    <?php
+                    include "connection_be.php";
+
+                    // Consulta SQL para obtener las opciones de la tabla "qualifications"
+                    $sql = "SELECT * FROM Qualifications";
+                    $result = mysqli_query($conexion, $sql);
+
+                    // Imprimir las opciones en la lista desplegable
+                    while ($row = $result->fetch_assoc()) {
+                        echo "<option value='" . $row["qualification"] . "'>" . $row["qualification"] . "</option>";
+
+                    }
+
+                    mysqli_close($conexion);
+                    ?>
+                </select>
+
+                <label for="level">Level:</label>
+                <select id="level" name="level">
+                    <option value="Beginner">Beginner</option>
+                    <option value="Intermediate">Intermediate</option>
+                    <option value="Advanced">Advanced</option>
+                </select>
+
+                <label for="knowledge">Knowledge:</label>
+                <input type="text" id="knowledge" name="knowledge">
+
+                <label for="technologies">Technologies:</label>
+                <input type="text" id="technologies" name="technologies">
+
+                <button id="create_profile_btn"><i class="fa fa-paper-plane"></i></i></button>
+
+            </div>
+        </div>
+
     </main>
-    
+
     <script src="../js/bars-cross.js"></script>
 
 </body>
