@@ -36,10 +36,10 @@ if (!isset($_SESSION['usuario'])) {
             <?php
 
             echo '<a href="sendpg.php?usuario=' . urlencode($usuario) . '&pg=home">
-            
-                        <img src="../icon/logo.png" alt="logo" />
+    
+                <img src="../icon/logo.png" alt="logo" />
 
-                    </a>'
+            </a>'
                 ?>
         </div>
 
@@ -55,37 +55,37 @@ if (!isset($_SESSION['usuario'])) {
                 <li>
                     <?php
                     echo '<a href="sendpg.php?usuario=' . urlencode($usuario) . '&pg=home">
-                        Home
-                    </a>';
+                Home
+            </a>';
                     ?>
                 </li>
 
                 <li>
                     <?php
                     echo '<a href="sendpg.php?usuario=' . urlencode($usuario) . '&pg=projects">
-                        Projects
-                    </a>' ?>
+                Projects
+            </a>' ?>
                 </li>
 
                 <li>
                     <?php
                     echo '<a href="sendpg.php?usuario=' . urlencode($usuario) . '&pg=profiles">
-                        Profiles
-                    </a>' ?>
+                Profiles
+            </a>' ?>
                 </li>
 
                 <li>
                     <?php
                     echo '<a href="sendpg.php?usuario=' . urlencode($usuario) . '&pg=ratings">
-                    Ratings
-                    </a>' ?>
+                Ratings
+            </a>' ?>
                 </li>
 
                 <li>
                     <?php
                     echo '<a href="sendpg.php?usuario=' . urlencode($usuario) . '&pg=user_place" class="btn">
-                        <button>@' . $usuario . '\'s place</button>
-                        </a>';
+                <button>@' . $usuario . '\'s place</button>
+                </a>';
                     ?>
                 </li>
 
@@ -116,21 +116,21 @@ if (!isset($_SESSION['usuario'])) {
         </div>
 
         <div id="no_users" style="display:none;">
-            <h2 id="nouser_h2" style="color:white;">There is no users with that name or surname, try another one. 🫡</h2>
+            <h2 id="nouser_h2" style="color:white;">There is no users with that name or surname, try another one. 🫡
+            </h2>
         </div>
 
-        <div id="Users" >
-            
+        <div id="Users">
+
             <div class="cards">
- 
 
             </div>
 
         </div>
-       
+
     </main>
 
-    
+
 
     <script src="../js/bars-cross.js"></script>
     <script src="../js/display_users.js"></script>

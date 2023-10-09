@@ -97,7 +97,7 @@ function display_users(event) {
 
                         var type = document.createElement('h4');
                         type.className = 'type';
-                        type.textContent = profile.type + ' / ' + profile.level;
+                        type.innerHTML = '<i class="fa-regular fa-user"></i> ' + profile.type + ' / ' + profile.level;
 
                         var knowledge = document.createElement('p');
                         knowledge.className = 'knowledge';

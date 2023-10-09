@@ -107,7 +107,7 @@ if (!isset($_SESSION['usuario'])) {
     </header>
 
     <main class="container">
-        
+
         <h1>My profiles:</h1>
 
         <div id="CRUD_profiles">
