@@ -108,6 +108,8 @@ if (!isset($_SESSION['usuario'])) {
 
     <main class="container">
 
+        <h1 id="title_users">@<?php echo $usuario; ?>'s user and profiles info</h1>
+
         <div id="CRUD_user">
 
             <div id="modificate_user">
@@ -305,6 +307,12 @@ if (!isset($_SESSION['usuario'])) {
                 <button id="delete_profile_btn"><i class="fa-solid fa-trash"></i></button>
 
             </div>
+
+            <!--
+                <div id="CRUD_projects_teams"></div>
+                <div id="CRUD_ratings"></div>
+            -->
+
             <div class="espacio_al_final"></div>
         </div>
         

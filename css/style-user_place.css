@@ -200,11 +200,23 @@ nav ul li {
   align-items: center;
 }
 
+#title_users{
+  position: relative;
+  top: 210px;
+  color: white;
+  font-size: 30px;
+  font-weight: 700;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin:5px;
+}
+
 /* ------------------ USER CSS ------------------ */
 
 #CRUD_user {
   position: relative;
-  top: 200px;
+  top: 240px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -303,7 +315,7 @@ th {
 
 #CRUD_profiles {
   position: relative;
-  top: 200px;
+  top: 250px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -412,7 +424,7 @@ button:hover {
   }
 
   #CRUD_profiles {
-    top: 600px; /*PARA QUE NO SE SOLAPE CON USERS INFO*/
+    top: 650px; /*PARA QUE NO SE SOLAPE CON USERS INFO*/
   }
 
 }
