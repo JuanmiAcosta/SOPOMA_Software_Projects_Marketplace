@@ -18,7 +18,7 @@ Desarrollo en grupo de un Sistema de Información. Pretende ser en primera insta
 <li>Activa Apache(Servidor) y MySQL(SGBD)</li>
 <li>Dale a admin en MySQL</li>
 <li>Crea una base de datos llamada exactamente "sopoma_bd" con formato "utf8mb4_spanish_ci".</li>
-<li>Crea las primeras tablas (apartado SQL) para comprobar que todo funcione y empezar a probar el register, login, logout y la recogida de datos de los perfiles:</li>
+<li>Crea las primeras tablas ( ten en cuenta que esto es en el apartado SQL de la BD para crear tablas, eliminar..., más adelante las tablas tendrán su propio apartado SQL para insertar, consultar...) para comprobar que todo funcione y empezar a probar el CRUD de los usuarios y perfiles, y el login y logout:</li>
 </ul>
 
 ```
@@ -80,14 +80,14 @@ INSERT INTO Qualifications (qualification) VALUES
 
 Ahora debes saber que la ruta para alojar el directorio del proyecto es : "C:\xampp\htdocs". Crea un directorio vacío con el nombre de "SOPOMA", más adelante clonarás el repositorio en él.
 
-Esto se debe a que al levantar el servidor sólo se ven los servicios de ese directorio.
+Esto se debe a que al levantar el servidor sólo se ven los servicios de ese directorio (  XAMPP está configurado para que el servidor web local (generalmente Apache) sirva los archivos desde el directorio "htdocs" por defecto. Esto significa que cuando accedes a "http://localhost" en tu navegador, Apache buscará los archivos en "htdocs" y los servirá. Por lo tanto, poner tus archivos en este directorio facilita el acceso a tu proyecto a través de "localhost" ).
 
 Ahora siempre que actives Apache y MySQL, y tengas el directorio con el proyecto en la ruta correcta podrás buscar "localhost/<NOMBRE_DE_TU_DIRECTORIO>" para ver tu proyecto.
 
-Puedes insertar tuplas directamente desde "phpMyAdmin", sin embargo recuerda que si insertas en el campo "password" 123, al insertarlo desde la aplicación la contraseña se encripta y desencripta. Mejor insertar las cosas desde la misma aplicación.
+Puedes insertar tuplas directamente desde "phpMyAdmin", sin embargo recuerda que si insertas en el campo "password" 123, al insertarlo desde la aplicación la contraseña se encripta y desencripta. Mejor insertar las cosas desde la misma aplicación (SOPOMA).
 
 > [!WARNING]
-> <h2 style="color:red; font-weight:bold;">IMPORTANTE CTRL+F5 EN LA PÁGINA PARA ACTUALIZAR TODO EL CÓDIGO DE LA PÁGINA</h2>
+> <h2 style="color:red; font-weight:bold;">IMPORTANTE CTRL+F5 EN LA PÁGINA PARA ACTUALIZAR TODO EL CÓDIGO DE LA PÁGINA. Si sólo haces ctrl+s en el IDE puede no actualizarse la página por temas de caché del navegador.</h2>
 
 ## Para clonar el repositorio de GitHub en un directorio local, siga estos pasos:
 
