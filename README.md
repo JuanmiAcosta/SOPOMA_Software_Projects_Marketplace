@@ -82,7 +82,7 @@ Ahora debes saber que la ruta para alojar el directorio del proyecto es : "C:\xa
 
 Esto se debe a que al levantar el servidor sólo se ven los servicios de ese directorio (  XAMPP está configurado para que el servidor web local (generalmente Apache) sirva los archivos desde el directorio "htdocs" por defecto. Esto significa que cuando accedes a "http://localhost" en tu navegador, Apache buscará los archivos en "htdocs" y los servirá. Por lo tanto, poner tus archivos en este directorio facilita el acceso a tu proyecto a través de "localhost" ).
 
-Ahora siempre que actives Apache y MySQL, y tengas el directorio con el proyecto en la ruta correcta podrás buscar "localhost/<NOMBRE_DE_TU_DIRECTORIO>" para ver tu proyecto.
+Ahora siempre que actives Apache y MySQL, y tengas el directorio con el proyecto en la ruta correcta podrás buscar "localhost/SOPOMA" para ver tu proyecto.
 
 Puedes insertar tuplas directamente desde "phpMyAdmin", sin embargo recuerda que si insertas en el campo "password" 123, al insertarlo desde la aplicación la contraseña se encripta y desencripta. Mejor insertar las cosas desde la misma aplicación (SOPOMA).
 
@@ -98,7 +98,7 @@ Puedes insertar tuplas directamente desde "phpMyAdmin", sin embargo recuerda que
 </ul>
 
 ```
-git clone https://github.com/JuanmiAcosta/PracticaDDSI-OSM.git
+git clone https://github.com/JuanmiAcosta/SOPOMA_Software_Projects_Marketplace.git
 ```
 
 Esto creará un nuevo directorio con el nombre del repositorio.
@@ -126,7 +126,7 @@ git commit -m "Primer commit de <NOMBRE>"
 Añada el repositorio remoto:
 
 ```
-git remote add origin https://github.com/JuanmiAcosta/PracticaDDSI-OSM.git
+git remote add origin https://github.com/JuanmiAcosta/SOPOMA_Software_Projects_Marketplace.git
 ```
 
 Ejecute el siguiente comando para clonar el historial de commits del repositorio remoto:
