@@ -187,13 +187,11 @@ nav ul li {
 
 /* ------------------ NAVBAR END ------------------ */
 
-.espacio_al_final{
+.espacio_al_final {
   opacity: 0;
   height: 50px;
   width: 100%;
 }
-
-/* ------------------ PROFILES CSS ------------------ */
 
 .container {
   display: flex;
@@ -202,9 +200,11 @@ nav ul li {
   align-items: center;
 }
 
-#CRUD_profiles {
+/* ------------------ USER CSS ------------------ */
+
+#CRUD_user {
   position: relative;
-  top: 8%;
+  top: 200px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -213,15 +213,120 @@ nav ul li {
   margin-bottom: 30px;
 }
 
-h1,
+#modificate_user,
+#delete_user {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  width: 35%;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+#modificate_user label,
+#delete_user label {
+  width: 100%;
+}
+
+#modificate_user input[type="email"],
+#modificate_user input[type="number"],
+#modificate_user input[type="text"],
+#delete_user input[type="email"],
+#delete_user input[type="number"],
+#delete_user input[type="text"] {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+#modificate_user button,
+#delete_user button {
+  width: 100%;
+}
+
+table {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+td {
+  padding: 10px;
+  border: 1px solid #ccc;
+  color: white;
+  font-size: large;
+  font-weight: 500;
+}
+
+th {
+  background-color: white;
+  padding: 10px;
+  border: 1px solid black;
+  font-size: large;
+  font-weight: 500;
+  font-weight: bold;
+}
+
+@media (max-width: 1005px) {
+
+  table {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  td {
+    padding: 5px;
+    font-size: small;
+    font-weight: 400;
+  }
+
+  th {
+    padding: 5px;
+    font-size: small;
+    font-weight: 400;
+    font-weight: bold;
+  }
+
+}
+
+@media (max-width: 700px) {
+
+  #modificate_user,
+  #delete_user {
+    width: 90%;
+  }
+}
+
+
+
+/* ------------------ USER CSS END ------------------ */
+
+/* ------------------ PROFILES CSS ------------------ */
+
+#CRUD_profiles {
+  position: relative;
+  top: 200px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  height: 60vh;
+  margin-bottom: 30px;
+}
+
 h2,
 label {
   color: #fff;
-}
-
-h1 {
-  margin: 20px 0px;
-  font-size: 30px;
 }
 
 h2 {
@@ -300,6 +405,16 @@ button:hover {
   width: 100%;
 }
 
+#delete_profile_btn,
+#delete_user_btn {
+  background-color: #ff0000;
+}
+
+#delete_profile_btn:hover,
+#delete_user_btn:hover {
+  background-color: #ff3333;
+}
+
 @media (max-width: 830px) {
 
   #create_profile,
@@ -308,5 +423,13 @@ button:hover {
     width: 90%;
   }
 }
+
+@media (max-width: 830px) {
+
+  #CRUD_profiles {
+    top: 600px; /*PARA QUE NO SE SOLAPE CON USERS INFO*/
+  }
+}
+
 
 /* ------------------ PROFILES CSS END ------------------ */

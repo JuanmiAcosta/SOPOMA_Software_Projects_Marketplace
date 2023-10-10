@@ -108,7 +108,88 @@ if (!isset($_SESSION['usuario'])) {
 
     <main class="container">
 
-        <h1>My profiles:</h1>
+        <div id="CRUD_user">
+
+            <div id="modificate_user">
+
+                <h2>Modificate user info</h2>
+
+                <label for="modificate_email">New email:</label>
+                <input type="email" class="email" id="modificate_email" name="modificate_email">
+
+                <label for="modificate_phone">New phone:</label>
+                <input type="number" class="phone" id="modificate_phone" name="modificate_phone">
+
+                <label for="modificate_phone">New name:</label>
+                <input type="text" class="name" id="modificate_name" name="modificate_name">
+
+                <label for="modificate_phone">New surname:</label>
+                <input type="text" class="surname" id="modificate_surname" name="modificate_surname">
+
+                <button id="modificate_profile_btn"><i class="fa-solid fa-arrows-spin"></i></button>
+
+            </div>
+
+            <div id="delete_user">
+
+                <h2>Delete user</h2>
+
+                <?php
+                include "connection_be.php";
+
+                // Consulta SQL para obtener los datos del usuario
+                $query = "SELECT * FROM users WHERE user = '$usuario'";
+                $result = mysqli_query($conexion, $query);
+
+                // Imprimir los datos del usuario
+                while ($row = $result->fetch_assoc()) {
+                    $nombre = $row["name"];
+                    $apellido = $row["surname"];
+                    $email = $row["email"];
+                    $telefono = $row["phone"];
+                }
+
+                mysqli_close($conexion)
+
+                    ?>
+
+                <table>
+                    <tr>
+                        <th>Nombre</th>
+                        <td>
+                            <?php echo $nombre; ?>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Apellido</th>
+                        <td>
+                            <?php echo $apellido; ?>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Email</th>
+                        <td>
+                            <?php echo $email; ?>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Teléfono</th>
+                    <td>
+                        <?php echo $telefono; ?>
+                    </td>
+                    <tr>
+                        <th>Usuario</th>
+                        <td>
+                            <?php echo $usuario; ?>
+                        </td>
+                    </tr>
+                </table>
+
+                <button id="delete_profile_btn" ><i class="fa-solid fa-trash"></i></button>
+
+            </div>
+
+        </div>
 
         <div id="CRUD_profiles">
 
@@ -224,12 +305,12 @@ if (!isset($_SESSION['usuario'])) {
                 <button id="delete_profile_btn"><i class="fa-solid fa-trash"></i></button>
 
             </div>
-
+            <div class="espacio_al_final"></div>
         </div>
-
-        <div class="espacio_al_final"></div>
-
+        
     </main>
+
+    
 
     <script src="../js/bars-cross.js"></script>
 
