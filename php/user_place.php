@@ -119,7 +119,7 @@ if (!isset($_SESSION['usuario'])) {
 
                 <h2>Modificate user info</h2>
 
-                <form action="CRUD_user.php?usuario=<?php echo urlencode($usuario); ?>" method="POST" onsubmit="return mod_user()">
+                <form action="MOD_user.php?usuario=<?php echo urlencode($usuario); ?>" method="POST" onsubmit="return mod_user()">
 
                     <label for="modificate_phone">New phone:</label>
                     <input type="number" class="phone" id="modificate_phone" name="phone">
