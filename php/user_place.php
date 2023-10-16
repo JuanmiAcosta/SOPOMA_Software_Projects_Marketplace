@@ -116,9 +116,6 @@ if (!isset($_SESSION['usuario'])) {
 
                 <h2>Modificate user info</h2>
 
-                <label for="modificate_email">New email:</label>
-                <input type="email" class="email" id="modificate_email" name="modificate_email">
-
                 <label for="modificate_phone">New phone:</label>
                 <input type="number" class="phone" id="modificate_phone" name="modificate_phone">
 

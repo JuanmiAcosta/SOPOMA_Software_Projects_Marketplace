@@ -35,6 +35,7 @@ if (!isset($_SESSION['usuario'])) {
     <link rel="shortcut icon" href="../icon/logo.png" />
     <link rel="stylesheet" href="../css/style-home.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/echarts/dist/echarts.min.js"></script>
 </head>
 
 <body style="font-family: 'system-ui', sans-serif;">
@@ -154,7 +155,9 @@ if (!isset($_SESSION['usuario'])) {
                         <p>Specify your profiles and find the best project team to work with.</p>
                     </div>
                     <div style="background-color:#80A2E8" class="badge">
-                        <span>Profiles: <?php echo $profiles; ?></span>
+                        <span>Profiles:
+                            <?php echo $profiles; ?>
+                        </span>
                     </div>
                 </div>
             </div>
@@ -174,9 +177,12 @@ if (!isset($_SESSION['usuario'])) {
                 </div>
             </div>
 
+            <div class="espacio_al_final" ></div>
+
         </div>
 
     </main>
+
 
     <script src="../js/welcome.js"></script>
     <script src="../js/bars-cross.js"></script>

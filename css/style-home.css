@@ -188,13 +188,20 @@ nav ul li {
 
 /* ------------------ NAVBAR END ------------------ */
 
+.espacio_al_final{
+    opacity: 0;
+    height: 50px;
+    width: 100%;
+    display:none;
+}
+
 /* ------------------ MAIN ------------------ */
 #welcome {
     text-align: center;
     line-height: 50px;
     /*centrarlo en los dos ejes*/
     position: absolute;
-    top: 22%;
+    top: 150px;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 90%;
@@ -229,7 +236,7 @@ main{
 
 .cards {
     position: relative;
-    top: 4%;
+    top: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -308,7 +315,6 @@ main{
 @media (min-width: 1700px) {
 
     .cards {
-        top: 5%;
         flex-wrap: wrap;
         align-content: flex-start;
         /* Controla la alineación vertical */
@@ -326,19 +332,15 @@ main{
 
 @media (max-width: 1000px) {
 
+    .espacio_al_final{
+        display: block;
+    }
+
     .cards {
-        top: 5%;
         flex-wrap: wrap;
         align-content: flex-start;
         /* Controla la alineación vertical */
         width: 70%;
-    }
-
-    /* DAR MARGEN DEBAJO DE LAS CARTAS CON EL FLEX-WRAP */
-    body::after {
-        content: "";
-        display: block;
-        height: 1300px;
     }
 
     .card img {
@@ -347,6 +349,10 @@ main{
 }
 
 @media (max-width: 500px) {
+
+    #graph{
+        width:300px;
+    }
 
     .card {
         box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4);
