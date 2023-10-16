@@ -24,6 +24,7 @@ if (!isset($_SESSION['usuario'])) {
     <meta name="description" content="The main content area." />
     <link rel="shortcut icon" href="../icon/logo.png" />
     <link rel="stylesheet" href="../css/style-user_place.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 
@@ -108,7 +109,9 @@ if (!isset($_SESSION['usuario'])) {
 
     <main class="container">
 
-        <h1 id="title_users">@<?php echo $usuario; ?>'s user and profiles info</h1>
+        <h1 id="title_users">@
+            <?php echo $usuario; ?>'s user and profiles info
+        </h1>
 
         <div id="CRUD_user">
 
@@ -116,16 +119,20 @@ if (!isset($_SESSION['usuario'])) {
 
                 <h2>Modificate user info</h2>
 
-                <label for="modificate_phone">New phone:</label>
-                <input type="number" class="phone" id="modificate_phone" name="modificate_phone">
+                <form action="CRUD_user.php?usuario=<?php echo urlencode($usuario); ?>" method="POST" onsubmit="return mod_user()">
 
-                <label for="modificate_phone">New name:</label>
-                <input type="text" class="name" id="modificate_name" name="modificate_name">
+                    <label for="modificate_phone">New phone:</label>
+                    <input type="number" class="phone" id="modificate_phone" name="phone">
 
-                <label for="modificate_phone">New surname:</label>
-                <input type="text" class="surname" id="modificate_surname" name="modificate_surname">
+                    <label for="modificate_phone">New name:</label>
+                    <input type="text" class="name" id="modificate_name" name="name">
 
-                <button id="modificate_profile_btn"><i class="fa-solid fa-arrows-spin"></i></button>
+                    <label for="modificate_phone">New surname:</label>
+                    <input type="text" class="surname" id="modificate_surname" name="surname">
+
+                    <button id="modificate_user_btn"><i class="fa-solid fa-arrows-spin"></i></button>
+
+                </form>
 
             </div>
 
@@ -173,18 +180,18 @@ if (!isset($_SESSION['usuario'])) {
                     </tr>
                     <tr>
                         <th>Teléfono</th>
-                    <td>
-                        <?php echo $telefono; ?>
-                    </td>
+                        <td>
+                            <?php echo $telefono; ?>
+                        </td>
                     <tr>
                         <th>Usuario</th>
-                        <td>
+                        <td id="user_name">
                             <?php echo $usuario; ?>
                         </td>
                     </tr>
                 </table>
 
-                <button id="delete_profile_btn" ><i class="fa-solid fa-trash"></i></button>
+                <button id="delete_user_btn"><i class="fa-solid fa-trash"></i></button>
 
             </div>
 
@@ -312,11 +319,10 @@ if (!isset($_SESSION['usuario'])) {
 
             <div class="espacio_al_final"></div>
         </div>
-        
+
     </main>
 
-    
-
+    <script src="../js/CRUD_user.js"></script>
     <script src="../js/bars-cross.js"></script>
 
 </body>
