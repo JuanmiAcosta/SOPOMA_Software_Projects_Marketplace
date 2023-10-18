@@ -27,12 +27,30 @@ function mod_user(event) {
 
     // Validación de teléfono
 
-    if (!(regexPhone.test(phone))) {
+    if (!(regexPhone.test(phone)) && phone != "") {
         alert('Invalid phone format. Only 9 digits allowed (Spanish format)');
         return false;
     }else{
         return true;
     }
+}
+
+function del_user(event){
+    
+    // Prevenir el comportamiento predeterminado del botón
+    if (typeof event !== 'undefined') {
+        // Evitar que se envíe el formulario
+        event.preventDefault();
+    }
+
+    var mensaje;
+    var opcion = confirm("Are you aware that you are deleting all your information in the system? (Deleting your projects, profiles, ratings and memberships in teams)");
+    if (opcion == true) {
+        mensaje = "You have deleted your account. We hope to see you soon!";
+	} else {
+	    mensaje = "You have not deleted your account.";
+	}
+	alert(mensaje);
 }
 
 

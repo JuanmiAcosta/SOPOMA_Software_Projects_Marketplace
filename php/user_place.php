@@ -119,10 +119,13 @@ if (!isset($_SESSION['usuario'])) {
 
                 <h2>Modificate user info</h2>
 
-                <form action="MOD_user.php?usuario=<?php echo urlencode($usuario); ?>" method="POST" onsubmit="return mod_user()">
+                <form action="CRUD_user.php?usuario=<?php echo urlencode($usuario); ?>" method="POST"
+                    onsubmit="return mod_user()">
+
+                    <input type="hidden" name="action" value="mod">
 
                     <label for="modificate_phone">New phone:</label>
-                    <input type="number" class="phone" id="modificate_phone" name="phone">
+                    <input type="text" class="phone" id="modificate_phone" name="phone">
 
                     <label for="modificate_phone">New name:</label>
                     <input type="text" class="name" id="modificate_name" name="name">
@@ -191,7 +194,11 @@ if (!isset($_SESSION['usuario'])) {
                     </tr>
                 </table>
 
-                <button id="delete_user_btn"><i class="fa-solid fa-trash"></i></button>
+                <form action="CRUD_user.php?usuario=<?php echo urlencode($usuario); ?>" method="POST"
+                    onsubmit="return del_user()">
+                    <input type="hidden" name="action" value="del">
+                    <button id="delete_user_btn"><i class="fa-solid fa-trash"></i></button>
+                </form>
 
             </div>
 
@@ -308,7 +315,11 @@ if (!isset($_SESSION['usuario'])) {
                     ?>
                 </select>
 
-                <button id="delete_profile_btn"><i class="fa-solid fa-trash"></i></button>
+                <form action="CRUD_profile.php?usuario=<?php echo urlencode($usuario); ?>" method="POST"
+                    onsubmit="return del_profile()">
+                    <input type="hidden" name="action" value="del">
+                    <button id="delete_profile_btn"><i class="fa-solid fa-trash"></i></button>
+                </form>
 
             </div>
 
