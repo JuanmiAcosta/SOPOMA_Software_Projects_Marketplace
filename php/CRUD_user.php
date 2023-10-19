@@ -9,7 +9,6 @@ $surname = $_POST['surname'];
 $phone = $_POST['phone'];
 
 $action = $_POST['action'];
-echo "<script>console.log(action = $action)</script>";
 
 if ($action == 'mod') {
     // Construir la consulta SQL

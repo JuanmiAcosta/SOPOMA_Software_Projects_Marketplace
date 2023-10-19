@@ -143,60 +143,62 @@ if (!isset($_SESSION['usuario'])) {
 
                 <h2>Delete user</h2>
 
-                <?php
-                include "connection_be.php";
-
-                // Consulta SQL para obtener los datos del usuario
-                $query = "SELECT * FROM users WHERE user = '$usuario'";
-                $result = mysqli_query($conexion, $query);
-
-                // Imprimir los datos del usuario
-                while ($row = $result->fetch_assoc()) {
-                    $nombre = $row["name"];
-                    $apellido = $row["surname"];
-                    $email = $row["email"];
-                    $telefono = $row["phone"];
-                }
-
-                mysqli_close($conexion)
-
-                    ?>
-
-                <table>
-                    <tr>
-                        <th>Nombre</th>
-                        <td>
-                            <?php echo $nombre; ?>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th>Apellido</th>
-                        <td>
-                            <?php echo $apellido; ?>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th>Email</th>
-                        <td>
-                            <?php echo $email; ?>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th>Teléfono</th>
-                        <td>
-                            <?php echo $telefono; ?>
-                        </td>
-                    <tr>
-                        <th>Usuario</th>
-                        <td id="user_name">
-                            <?php echo $usuario; ?>
-                        </td>
-                    </tr>
-                </table>
-
                 <form action="CRUD_user.php?usuario=<?php echo urlencode($usuario); ?>" method="POST"
                     onsubmit="return del_user()">
                     <input type="hidden" name="action" value="del">
+
+                    <?php
+                    include "connection_be.php";
+
+                    // Consulta SQL para obtener los datos del usuario
+                    $query = "SELECT * FROM users WHERE user = '$usuario'";
+                    $result = mysqli_query($conexion, $query);
+
+                    // Imprimir los datos del usuario
+                    while ($row = $result->fetch_assoc()) {
+                        $nombre = $row["name"];
+                        $apellido = $row["surname"];
+                        $email = $row["email"];
+                        $telefono = $row["phone"];
+                    }
+
+                    mysqli_close($conexion)
+
+                        ?>
+
+                    <table>
+                        <tr>
+                            <th>Nombre</th>
+                            <td>
+                                <?php echo $nombre; ?>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Apellido</th>
+                            <td>
+                                <?php echo $apellido; ?>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Email</th>
+                            <td>
+                                <?php echo $email; ?>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Teléfono</th>
+                            <td>
+                                <?php echo $telefono; ?>
+                            </td>
+                        <tr>
+                            <th>Usuario</th>
+                            <td id="user_name">
+                                <?php echo $usuario; ?>
+                            </td>
+                        </tr>
+                    </table>
+
+
                     <button id="delete_user_btn"><i class="fa-solid fa-trash"></i></button>
                 </form>
 
@@ -210,39 +212,44 @@ if (!isset($_SESSION['usuario'])) {
 
                 <h2>Create profile</h2>
 
-                <label for="create_qualification">Qualification:</label>
-                <select class="qualification" id="create_qualification" name="create_qualification">
-                    <?php
-                    include "connection_be.php";
+                <form action="CRUD_profile.php?usuario=<?php echo urlencode($usuario); ?>" method="POST"
+                    onsubmit="return create_profile()">
 
-                    // Consulta SQL para obtener las opciones de la tabla "qualifications"
-                    $sql = "SELECT * FROM Qualifications";
-                    $result = mysqli_query($conexion, $sql);
+                    <input type="hidden" name="action" value="create">
+                    <label for="create_qualification">Qualification:</label>
+                    <select class="qualification" id="create_qualification" name="qualification">
+                        <?php
+                        include "connection_be.php";
 
-                    // Imprimir las opciones en la lista desplegable
-                    while ($row = $result->fetch_assoc()) {
-                        echo "<option value='" . $row["qualification"] . "'>" . $row["qualification"] . "</option>";
+                        // Consulta SQL para obtener las opciones de la tabla "qualifications"
+                        $sql = "SELECT * FROM Qualifications";
+                        $result = mysqli_query($conexion, $sql);
 
-                    }
+                        // Imprimir las opciones en la lista desplegable
+                        while ($row = $result->fetch_assoc()) {
+                            echo "<option value='" . $row["qualification"] . "'>" . $row["qualification"] . "</option>";
 
-                    mysqli_close($conexion);
-                    ?>
-                </select>
+                        }
 
-                <label for="create_level">Level:</label>
-                <select class="level" id="create_level" name="create_level">
-                    <option value="Beginner">Beginner</option>
-                    <option value="Intermediate">Intermediate</option>
-                    <option value="Advanced">Advanced</option>
-                </select>
+                        mysqli_close($conexion);
+                        ?>
+                    </select>
 
-                <label for="create_knowledge">Knowledge:</label>
-                <input type="text" class="knowledge" id="create_knowledge" name="create_knowledge">
+                    <label for="create_level">Level:</label>
+                    <select class="level" id="create_level" name="level">
+                        <option value="Beginner">Beginner</option>
+                        <option value="Intermediate">Intermediate</option>
+                        <option value="Advanced">Advanced</option>
+                    </select>
 
-                <label for="create_technologies">Technologies:</label>
-                <input type="text" class="technologies" id="create_technologies" name="create_technologies">
+                    <label for="create_knowledge">Knowledge:</label>
+                    <input type="text" class="knowledge" id="create_knowledge" name="knowledge">
 
-                <button id="create_profile_btn"><i class="fa-regular fa-square-plus"></i></button>
+                    <label for="create_technologies">Technologies:</label>
+                    <input type="text" class="technologies" id="create_technologies" name="technologies">
+
+                    <button id="create_profile_btn"><i class="fa-regular fa-square-plus"></i></button>
+                </form>
 
             </div>
 
@@ -250,42 +257,46 @@ if (!isset($_SESSION['usuario'])) {
 
                 <h2>Modificate profile</h2>
 
-                <label for="modificate_qualification">Qualification:</label>
-                <select class="qualification" id="modificate_qualification" name="modificate_qualification">
-                    <?php
-                    include "connection_be.php";
+                <form action="CRUD_profile.php?usuario=<?php echo urlencode($usuario); ?>" method="POST"
+                    onsubmit="return mod_profile()">
+                    <input type="hidden" name="action" value="mod">
+                    <label for="modificate_qualification">Qualification:</label>
+                    <select class="qualification" id="modificate_qualification" name="qualification">
+                        <?php
+                        include "connection_be.php";
 
-                    // Consulta SQL para obtener las opciones de la tabla "qualifications"
-                    $sql = "SELECT Qualifications.qualification
+                        // Consulta SQL para obtener las opciones de la tabla "qualifications"
+                        $sql = "SELECT Qualifications.qualification
                     FROM Qualifications
                     INNER JOIN profiles ON Qualifications.qualification = profiles.type
                     WHERE profiles.user = '$usuario'";
-                    $result = mysqli_query($conexion, $sql);
+                        $result = mysqli_query($conexion, $sql);
 
-                    // Imprimir las opciones en la lista desplegable
-                    while ($row = $result->fetch_assoc()) {
-                        echo "<option value='" . $row["qualification"] . "'>" . $row["qualification"] . "</option>";
+                        // Imprimir las opciones en la lista desplegable
+                        while ($row = $result->fetch_assoc()) {
+                            echo "<option value='" . $row["qualification"] . "'>" . $row["qualification"] . "</option>";
 
-                    }
+                        }
 
-                    mysqli_close($conexion);
-                    ?>
-                </select>
+                        mysqli_close($conexion);
+                        ?>
+                    </select>
 
-                <label for="modificate_level">Level:</label>
-                <select class="level" id="modificate_level" name="modificate_level">
-                    <option value="Beginner">Beginner</option>
-                    <option value="Intermediate">Intermediate</option>
-                    <option value="Advanced">Advanced</option>
-                </select>
+                    <label for="modificate_level">Level:</label>
+                    <select class="level" id="modificate_level" name="level">
+                        <option value="Beginner">Beginner</option>
+                        <option value="Intermediate">Intermediate</option>
+                        <option value="Advanced">Advanced</option>
+                    </select>
 
-                <label for="modificate_knowledge">Knowledge:</label>
-                <input type="text" class="knowledge" id="modificate_knowledge" name="modificate_knowledge">
+                    <label for="modificate_knowledge">Knowledge:</label>
+                    <input type="text" class="knowledge" id="modificate_knowledge" name="knowledge">
 
-                <label for="modificate_technologies">Technologies:</label>
-                <input type="text" class="technologies" id="modificate_technologies" name="modificate_technologies">
+                    <label for="modificate_technologies">Technologies:</label>
+                    <input type="text" class="technologies" id="modificate_technologies" name="technologies">
 
-                <button id="modificate_profile_btn"><i class="fa-solid fa-arrows-spin"></i></button>
+                    <button id="modificate_profile_btn"><i class="fa-solid fa-arrows-spin"></i></button>
+                </form>
 
             </div>
 
@@ -293,31 +304,34 @@ if (!isset($_SESSION['usuario'])) {
 
                 <h2>Delete profile</h2>
 
-                <label for="delete_qualification">Qualification:</label>
-                <select class="qualification" id="delete_qualification" name="delete_qualification">
-                    <?php
-                    include "connection_be.php";
+                <form action="CRUD_profile.php?usuario=<?php echo urlencode($usuario); ?>" method="POST"
+                    onsubmit="return del_profile()">
 
-                    // Consulta SQL para obtener las opciones de la tabla "qualifications"
-                    $sql = "SELECT Qualifications.qualification FROM Qualifications 
+                    <input type="hidden" name="action" value="del">
+
+                    <label for="delete_qualification">Qualification:</label>
+                    <select class="qualification" id="delete_qualification" name="qualification">
+                        <?php
+                        include "connection_be.php";
+
+                        // Consulta SQL para obtener las opciones de la tabla "qualifications"
+                        $sql = "SELECT Qualifications.qualification FROM Qualifications 
                     INNER JOIN profiles ON Qualifications.qualification = profiles.type 
                     WHERE profiles.user = '$usuario'";
 
-                    $result = mysqli_query($conexion, $sql);
+                        $result = mysqli_query($conexion, $sql);
 
-                    // Imprimir las opciones en la lista desplegable
-                    while ($row = $result->fetch_assoc()) {
-                        echo "<option value='" . $row["qualification"] . "'>" . $row["qualification"] . "</option>";
+                        // Imprimir las opciones en la lista desplegable
+                        while ($row = $result->fetch_assoc()) {
+                            echo "<option value='" . $row["qualification"] . "'>" . $row["qualification"] . "</option>";
 
-                    }
+                        }
 
-                    mysqli_close($conexion);
-                    ?>
-                </select>
+                        mysqli_close($conexion);
+                        ?>
+                    </select>
 
-                <form action="CRUD_profile.php?usuario=<?php echo urlencode($usuario); ?>" method="POST"
-                    onsubmit="return del_profile()">
-                    <input type="hidden" name="action" value="del">
+
                     <button id="delete_profile_btn"><i class="fa-solid fa-trash"></i></button>
                 </form>
 
