@@ -21,7 +21,7 @@ function create_profile(event) {
     console.log(knowledge);
     console.log(technologies);
 
-    if (knowledge == "" && technologies == "") {
+    if (knowledge == "" || technologies == "") {
         alert('You need to specify at least one knowledge and technology to create a profile');
         return false;
     } else {
@@ -31,7 +31,7 @@ function create_profile(event) {
 }
 
 
-function mod_profile(event) {
+function mod_profile(event) { 
 
     // Prevenir el comportamiento predeterminado del botón
     if (typeof event !== 'undefined') {
@@ -54,8 +54,8 @@ function mod_profile(event) {
     console.log(knowledge);
     console.log(technologies);
 
-    if (type == "" && level == "" && knowledge == "" && technologies == "") {
-        alert('You have not modified any data');
+    if (knowledge.contains("'") || technologies.contains("'")) {
+        alert('You cannot use the character \' to create a profile');
         return false;
     } else {
         return true;
@@ -74,8 +74,12 @@ function del_profile(event) {
     var opcion = confirm("Are you aware that you are deleting all the information of this profile in the system?");
     if (opcion == true) {
         mensaje = "You have deleted the profile.";
+        return true;
+
     } else {
         mensaje = "You have not deleted the profile.";
+        return false;
+        
     }
     alert(mensaje);
 }

@@ -14,7 +14,7 @@ CREATE TABLE Qualifications (
 CREATE TABLE Profiles (
     user VARCHAR(50),
     type VARCHAR(50) NOT NULL,
-    level VARCHAR(50) CHECK ( level in ('Beginer','Intermediate','Advanced')), 
+    level VARCHAR(50) CHECK ( level in ('Beginner','Intermediate','Advanced')), 
     knowledge LONGTEXT,
     technologies LONGTEXT,
     PRIMARY KEY (user, type),

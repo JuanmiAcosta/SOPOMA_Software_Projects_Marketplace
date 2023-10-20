@@ -346,7 +346,8 @@ if (!isset($_SESSION['usuario'])) {
         </div>
 
     </main>
-
+    
+    <script src="../js/CRUD_profiles.js"></script>
     <script src="../js/CRUD_user.js"></script>
     <script src="../js/bars-cross.js"></script>
 
