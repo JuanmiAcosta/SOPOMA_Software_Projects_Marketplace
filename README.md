@@ -1,5 +1,5 @@
 # SOPOMA Software Projects Marketplace ( Sistema de Información )
-Desarrollo en grupo de un Sistema de Información. Pretende ser en primera instancia un Marketplace para proyectos de software en el que los usuarios colaboradores participaran en ellos de diversas maneras a escoger.
+Desarrollo de un Sistema de Información. Pretende ser en primera instancia un Marketplace para proyectos de software en el que los usuarios colaboradores participaran en ellos de diversas maneras a escoger.
 
 <p align="center">
   <img src="https://github.com/JuanmiAcosta/PracticaDDSI-OSM/blob/main/icon/logo.png?raw=true" alt="Imagen representativa">
@@ -87,7 +87,7 @@ Ahora siempre que actives Apache y MySQL, y tengas el directorio con el proyecto
 Puedes insertar tuplas directamente desde "phpMyAdmin", sin embargo recuerda que si insertas en el campo "password" 123, al insertarlo desde la aplicación la contraseña se encripta y desencripta. Mejor insertar las cosas desde la misma aplicación (SOPOMA).
 
 > [!WARNING]
-> <h2 style="color:red; font-weight:bold;">IMPORTANTE CTRL+F5 EN LA PÁGINA PARA ACTUALIZAR TODO EL CÓDIGO DE LA PÁGINA. Si sólo haces ctrl+s en el IDE puede no actualizarse la página por temas de caché del navegador.</h2>
+> <h2 style="color:red; font-weight:bold;">Actualmente en desarrollo.</h2>
 
 ## Para clonar el repositorio de GitHub en un directorio local, siga estos pasos:
 
